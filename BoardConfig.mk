@@ -29,7 +29,9 @@ BOARD_DATA_DEVICE := /dev/block/mmcblk0p8
 BOARD_DATA_FILESYSTEM := ext3
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p11
 BOARD_CACHE_FILESYSTEM := ext3
-#BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
+BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 #BOARD_HAS_NO_MISC_PARTITION := true
 
 # Recovery
