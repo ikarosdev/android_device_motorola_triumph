@@ -23,13 +23,13 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_PREBUILT_KERNEL := device/motorola/triumph/kernel
 
 # Filesystem
+BOARD_SYSTEM_DEVICE := /dev/block/mmcblk0p7
+BOARD_SYSTEM_FILESYSTEM := ext3
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p8
 BOARD_DATA_FILESYSTEM := ext3
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p11
 BOARD_CACHE_FILESYSTEM := ext3
 #BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SYSTEM_FILESYSTEM := ext3
-BOARD_SYSTEM_DEVICE := /dev/block/mmcblk0p7
 #BOARD_HAS_NO_MISC_PARTITION := true
 
 # Recovery
