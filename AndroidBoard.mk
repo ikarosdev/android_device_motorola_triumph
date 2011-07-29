@@ -4,11 +4,6 @@ include $(CLEAR_VARS)
 
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
-file := $(TARGET_RECOVERY_ROOT_OUT)/default.prop
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/recovery/default.prop | $(ACP)
-	$(transform-prebuilt-to-target)
-
 file := $(TARGET_RECOVERY_ROOT_OUT)/sbin/fih_imgupd
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/recovery/sbin/fih_imgupd | $(ACP)

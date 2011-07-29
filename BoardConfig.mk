@@ -3,15 +3,15 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/motorola/triumph/BoardConfigVendor.mk
 
-TARGET_NO_BOOTLOADER := false
-#TARGET_BOARD_PLATFORM := msm7x30
+TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_PLATFORM := msm7x30
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_BOOTLOADER_BOARD_NAME := triumph
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM1 androidboot.hardware=qcom
-BOARD_KERNEL_BASE := 0x20000000
+BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 4096
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00500000
@@ -36,7 +36,6 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 
 # Recovery
 BOARD_USES_MMCUTILS := true
-TARGET_RECOVERY_INITRC := device/motorola/triumph/recovery.rc
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/triumph/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/triumph/recovery/recovery_ui.c
 
 BOARD_HAS_NO_SELECT_BUTTON := true
