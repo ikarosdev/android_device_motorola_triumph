@@ -20,5 +20,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_triumph
+PRODUCT_NAME := motorola_triumph
 PRODUCT_DEVICE := triumph
+PRODUCT_BRAND := Motorola
+PRODUCT_MODEL := MOTWX435KT
+PRODUCT_MANUFACTURER := Motorola

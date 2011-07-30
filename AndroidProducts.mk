@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_triumph.mk
+    $(LOCAL_DIR)/triumph.mk

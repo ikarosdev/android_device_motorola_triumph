@@ -1,6 +1,6 @@
 # mountpoint	fstype              device    	       [device2]                       [fstype2]          [fsoptions]       [fsoptions2]
 
-/boot           emmc        /dev/block/mmcblk0p5     NULL                               NULL
+/boot           emmc        /dev/block/mmcblk0p5      NULL                              NULL
 /fat            vfat        /dev/block/mmcblk0p1      NULL                              NULL
 /cache          ext4	    /dev/block/mmcblk0p11     NULL                              ext3
 /data           ext4        /dev/block/mmcblk0p8      NULL                              ext3

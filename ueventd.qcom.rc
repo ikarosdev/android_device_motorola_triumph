@@ -1,0 +1,6 @@
+# gpu driver for adreno200 is globally accessible
+/dev/kgsl-3d0             0666   root       root
+/dev/kgsl-2d0             0666   root       root
+
+# these should not be world writable
+/dev/oncrpc/*             0666   root       root
