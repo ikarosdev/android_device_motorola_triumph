@@ -174,7 +174,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libOmxEvrcEnc.so:/system/lib/libOmxEvrcEnc.so \
     vendor/motorola/triumph/proprietary/lib/libOmxAacDec.so:/system/lib/libOmxAacDec.so \
-    vendor/motorola/triumph/proprietary/lib/libOmxQcelpDec.so:/system/lib/libOmxQcelp13Dec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxQcelp13Dec.so:/system/lib/libOmxQcelp13Dec.so \
     vendor/motorola/triumph/proprietary/lib/libOmxAmrEnc.so:/system/lib/libOmxAmrEnc.so \
     vendor/motorola/triumph/proprietary/lib/libOmxAdpcmDec.so:/system/lib/libOmxAdpcmDec.so \
     vendor/motorola/triumph/proprietary/lib/libOmxEvrcDec.so:/system/lib/libOmxEvrcDec.so \
