@@ -31,7 +31,6 @@ lib/libaudio.so
 lib/libaudioalsa.so
 lib/libaudioeq.so
 
-lib/egl/egl.cfg
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so

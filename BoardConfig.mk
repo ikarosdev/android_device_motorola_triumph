@@ -18,6 +18,8 @@ BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
 BOARD_USE_QCOM_PMEM := true
 
+BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
@@ -54,5 +56,4 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 # Recovery
 BOARD_USES_MMCUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/motorola/triumph/recovery/recovery_ui.c
-
 BOARD_HAS_NO_SELECT_BUTTON := true

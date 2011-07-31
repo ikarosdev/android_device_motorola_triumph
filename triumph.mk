@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/ueventd.qcom.rc:root/ueventd.qcom.rc
 
+# vold
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/vold.fstab:system/etc/vold.fstab
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:/system/etc/permissions/handheld_core_hardware.xml \
@@ -54,16 +58,14 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:/system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-# etc stuff
+# init scripts
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
     device/motorola/triumph/include/etc/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh\
     device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
     device/motorola/triumph/include/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
     device/motorola/triumph/include/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
-    device/motorola/triumph/include/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
-    device/motorola/triumph/include/etc/media_profiles.xml:/system/etc/media_profiles.xml \
-    device/motorola/triumph/vold.fstab:/system/etc/vold.fstab
+    device/motorola/triumph/include/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
 # HW init
 PRODUCT_COPY_FILES += \
@@ -169,14 +171,32 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libdss.so:/system/lib/libdss.so \
     vendor/motorola/triumph/proprietary/lib/libauth.so:/system/lib/libauth.so
 
+# xml config
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/include/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=131072
+
+# Perfomance tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.heapsize=48m \
+    persist.sys.use_dithering=1 \
+    ro.compcache.default=0
+
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d /dev/smd0 \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=60 \
-    ro.com.android.dataroaming=false
+    ro.com.android.dataroaming=false \
+    ro.sf.lcd_density=240 \
+    debug.sf.hw=1
 
-# Properties taken from default.prop
+# Properties taken from build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-motorola \
     ro.com.google.clientidbase.yt=android-motorola \
@@ -189,7 +209,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.cdma.ecclist=110,112,119,911 \
     ro.telephony.ecclist=08,000,110,112,118,119,911,999 \
     ro.telephony.num.auto.hyphen=true \
-    ro.telephony.gsm.spn.shortname=true
+    ro.telephony.gsm.spn.shortname=true \
+    gsm.operator.iso-country=us \
+    gsm.operator.numeric=311490 \
+    ro.cdma.home.operator.numeric=311490 \
+    keyguard.no_require_sim=true
 
 # Triumph uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
