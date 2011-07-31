@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Term \
     librs_jni \
+    gps.triumph \
     gralloc.msm7x30 \
     lights.msm7x30 \
     overlay.default \
