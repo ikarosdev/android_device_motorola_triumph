@@ -18,9 +18,19 @@ BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
 BOARD_USE_QCOM_PMEM := true
 
-BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
+BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
-# Wifi related defines
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+
+# Graphics
+BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
+BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
+BOARD_OVERLAY_MINIFICATION_LIMIT := 2
+BOARD_NO_RGBX_8888 := true
+
+# Wifi
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
 WPA_SUPPLICANT_VERSION := VER_0_6_X
 BOARD_WLAN_DEVICE := libra
@@ -28,6 +38,13 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/libra.ko"
 WIFI_DRIVER_MODULE_NAME := "libra"
 WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
 WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
+
+# Camera
+BOARD_CAMERA_USE_GETBUFFERINFO := true
+
+# GPS Defines
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := triumph
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM1 androidboot.hardware=qcom
 BOARD_KERNEL_BASE := 0x00200000
