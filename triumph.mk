@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     librs_jni \
     gralloc.msm7x30 \
     lights.msm7x30 \
+    overlay.default \
     libOmxCore \
     libOmxVenc \
     libOmxVdec
@@ -52,6 +53,22 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:/system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.hardware.sensor.accelerometer.xml:/system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:/system/etc/permissions/android.hardware.touchscreen.multitouch.xml
+
+# etc stuff
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
+    device/motorola/triumph/include/etc/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh\
+    device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
+    device/motorola/triumph/include/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
+    device/motorola/triumph/include/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
+    device/motorola/triumph/include/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh \
+    device/motorola/triumph/include/etc/media_profiles.xml:/system/etc/media_profiles.xml \
+    device/motorola/triumph/vold.fstab:/system/etc/vold.fstab
+
+# HW init
+PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/bin/qmuxd:/system/bin/qmuxd \
+    vendor/motorola/triumph/proprietary/bin/hci_qcomm_init:/system/bin/hci_qcomm_init
 
 # egl
 PRODUCT_COPY_FILES += \
@@ -91,12 +108,19 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/proprietary/lib/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so \
+    vendor/motorola/triumph/proprietary/lib/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
 
 # Wifi
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/modules/wifi/libra.ko:/system/wifi/libra.ko \
-    device/motorola/triumph/modules/wifi/librasdioif.ko:/system/wifi/librasdioif.ko \
+    device/motorola/triumph/modules/wifi/librasdioif.ko:/system/wifi/librasdioif.ko
+    device/motorola/triumph/include/etc/firmware/wlan/qcom_fw.bin:/system/etc/firmware/wlan/qcom_fw.bin \
+    device/motorola/triumph/include/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
+    device/motorola/triumph/include/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
+    device/motorola/triumph/include/etc/firmware/wlan/cfg.dat:/system/etc/firmware/wlan/cfg.dat \
+    device/motorola/triumph/include/etc/hostapd/hostapd.conf:/system/etc/hostapd/hostapd.conf \
+    device/motorola/triumph/include/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
+    device/motorola/triumph/include/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 # OMX
 PRODUCT_COPY_FILES += \

@@ -14,6 +14,14 @@ for DIR in $DIRS; do
 done
 
 FILES="
+bin/qmuxd
+bin/hci_qcomm_init
+
+bin/geomagneticd
+bin/orientationd
+bin/proximityd
+bin/lightd
+
 lib/libcamera.so
 lib/liboemcamera.so
 lib/libmmjpeg.so
