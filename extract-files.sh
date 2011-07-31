@@ -67,6 +67,7 @@ lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
+lib/libgsl.so
 
 lib/hw/sensors.qcom.so
 
