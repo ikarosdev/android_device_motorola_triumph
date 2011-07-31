@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test:/system/bin/mm-venc-omx-test \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \
     vendor/motorola/triumph/proprietary/bin/mm-video-driver-test:/system/bin/mm-video-driver-test \
-    vendor/motorola/triumph/proprietary/bin/mm-video-encdvr-test:/system/bin/mm-video-encdvr-test \
+    vendor/motorola/triumph/proprietary/bin/mm-video-encdvr-test:/system/bin/mm-video-encdvr-test
 
 # egl
 PRODUCT_COPY_FILES += \
