@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     vendor/motorola/triumph/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so
 
-# audio
+# Audio
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libaudio.so:/obj/lib/libaudio.so \
     vendor/motorola/triumph/proprietary/lib/libaudio.so:/system/lib/libaudio.so \
