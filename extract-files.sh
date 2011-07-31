@@ -93,6 +93,7 @@ lib/libomx_mp3dec_sharedlibrary.so
 lib/libomx_sharedlibrary.so
 lib/libOmxCore.so
 
+lib/libril.so
 lib/libril-qc-1.so
 lib/libreference-ril.so
 lib/libril-qcril-hook-oem.so
