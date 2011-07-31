@@ -93,6 +93,36 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so \
 
+# Wifi
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/modules/wifi/libra.ko:/system/wifi/libra.ko \
+    device/motorola/triumph/modules/wifi/librasdioif.ko:/system/wifi/librasdioif.ko \
+
+# OMX
+PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libOmxEvrcEnc.so:/system/lib/libOmxEvrcEnc.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAacDec.so:/system/lib/libOmxAacDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxQcelpDec.so:/system/lib/libOmxQcelp13Dec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAmrEnc.so:/system/lib/libOmxAmrEnc.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAdpcmDec.so:/system/lib/libOmxAdpcmDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxEvrcDec.so:/system/lib/libOmxEvrcDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAmrDec.so:/system/lib/libOmxAmrDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAmrwbDec.so:/system/lib/libOmxAmrwbDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxWmaDec.so:/system/lib/libOmxWmaDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxQcelp13Enc.so:/system/lib/libOmxQcelp13Enc.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxMp3Dec.so:/system/lib/libOmxMp3Dec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAmrRtpDec.so:/system/lib/libOmxAmrRtpDec.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxAacEnc.so:/system/lib/libOmxAacEnc.so \
+    vendor/motorola/triumph/proprietary/lib/libmm-adspsvc.so:/system/lib/libmm-adspsvc.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_aacdec_sharedlibrary.so:/system/lib/libomx_aacdec_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_amrdec_sharedlibrary.so:/system/lib/libomx_amrdec_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_amrenc_sharedlibrary.so:/system/lib/libomx_amrenc_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_avcdec_sharedlibrary.so:/system/lib/libomx_avcdec_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_m4vdec_sharedlibrary.so:/system/lib/libomx_m4vdec_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_mp3dec_sharedlibrary.so:/system/lib/libomx_mp3dec_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libomx_sharedlibrary.so:/system/lib/libomx_sharedlibrary.so \
+    vendor/motorola/triumph/proprietary/lib/libOmxCore.so:/system/lib/libOmxCore.so
+
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \
@@ -115,6 +145,13 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libdss.so:/system/lib/libdss.so \
     vendor/motorola/triumph/proprietary/lib/libauth.so:/system/lib/libauth.so
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/lib/libril-qc-1.so \
+    rild.libargs=-d /dev/smd0 \
+    wifi.interface=wlan0 \
+    wifi.supplicant_scan_interval=60 \
+    ro.com.android.dataroaming=false
+
 # Properties taken from default.prop
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-motorola \
@@ -129,6 +166,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ecclist=08,000,110,112,118,119,911,999 \
     ro.telephony.num.auto.hyphen=true \
     ro.telephony.gsm.spn.shortname=true
+
+# Triumph uses high-density artwork where available
+PRODUCT_LOCALES += hdpi
 
 $(call inherit-product, build/target/product/full.mk)
 

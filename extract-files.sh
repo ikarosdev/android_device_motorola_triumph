@@ -31,23 +31,28 @@ lib/egl/libq3dtools_adreno200.so
 
 lib/hw/sensors.qcom.so
 
-lib/libmm-adspsvc.so
-lib/libOmxAacDec.so
-lib/libOmxAacEnc.so
-lib/libOmxAmrDec.so
-lib/libOmxAmrEnc.so
-lib/libOmxAmrRtpDec.so
-lib/libOmxAmrwbDec.so
-lib/libOmxEvrcDec.so
 lib/libOmxEvrcEnc.so
-lib/libOmxH264Dec.so
-lib/libOmxMp3Dec.so
-lib/libOmxMpeg4Dec.so
-lib/libOmxQcelp13Enc.so
+lib/libOmxAacDec.so
 lib/libOmxQcelp13Dec.so
-lib/libOmxVidEnc.so
+lib/libOmxAmrEnc.so
+lib/libOmxAdpcmDec.so
+lib/libOmxEvrcDec.so
+lib/libOmxAmrDec.so
+lib/libOmxAmrwbDec.so
 lib/libOmxWmaDec.so
-lib/libOmxWmvDec.so
+lib/libOmxQcelp13Enc.so
+lib/libOmxMp3Dec.so
+lib/libOmxAmrRtpDec.so
+lib/libOmxAacEnc.so
+lib/libmm-adspsvc.so
+lib/libomx_aacdec_sharedlibrary.so
+lib/libomx_amrdec_sharedlibrary.so
+lib/libomx_amrenc_sharedlibrary.so
+lib/libomx_avcdec_sharedlibrary.so
+lib/libomx_m4vdec_sharedlibrary.so
+lib/libomx_mp3dec_sharedlibrary.so
+lib/libomx_sharedlibrary.so
+lib/libOmxCore.so
 
 lib/libril-qc-1.so
 lib/libreference-ril.so
