@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/geomagneticd:/system/bin/geomagneticd \
     vendor/motorola/triumph/proprietary/bin/orientationd:/system/bin/orientationd \
     vendor/motorola/triumph/proprietary/bin/proximityd:/system/bin/proximityd \
-    vendor/motorola/triumph/proprietary/bin/lightsd:/system/bin/lightsd
+    vendor/motorola/triumph/proprietary/bin/lightd:/system/bin/lightd
 
 # HDMI binary
     vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid
