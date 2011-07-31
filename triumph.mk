@@ -94,7 +94,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/mm-adec-omxamrwb-test:/system/bin/mm-adec-omxamrwb-test \
     vendor/motorola/triumph/proprietary/bin/mm-adec-omxevrc-test:/system/bin/mm-adec-omxevrc-test \
     vendor/motorola/triumph/proprietary/bin/mm-adec-omxmp3-test:/system/bin/mm-adec-omxmp3-test \
-    vendor/motorola/triumph/proprietary/bin/mm-adec-omxvam-test:/system/bin/mm-adec-omxvam-test \
+    vendor/motorola/triumph/proprietary/bin/mm-adec-omxQcelp13-test:/system/bin/mm-adec-omxQcelp13-test \
     vendor/motorola/triumph/proprietary/bin/mm-adec-omxwma-test:/system/bin/mm-adec-omxwma-test \
     vendor/motorola/triumph/proprietary/bin/mm-adspsvc-test:/system/bin/mm-adspsvc-test \
     vendor/motorola/triumph/proprietary/bin/mm-aenc-omxaac-test:/system/bin/mm-aenc-omxaac-test \
@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test:/system/bin/mm-venc-omx-test \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \
     vendor/motorola/triumph/proprietary/bin/mm-video-driver-test:/system/bin/mm-video-driver-test \
-    vendor/motorola/triumph/proprietary/bin/mm-video-encdvr-test:/system/bin/mm-video-encdvr-test
+    vendor/motorola/triumph/proprietary/bin/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test
 
 # egl
 PRODUCT_COPY_FILES += \

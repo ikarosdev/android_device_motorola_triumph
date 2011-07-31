@@ -30,7 +30,7 @@ bin/mm-adec-omxamr-test
 bin/mm-adec-omxamrwb-test
 bin/mm-adec-omxevrc-test
 bin/mm-adec-omxmp3-test
-bin/mm-adec-omxvam-test
+bin/mm-adec-omxQcelp13-test
 bin/mm-adec-omxwma-test
 bin/mm-adspsvc-test
 bin/mm-aenc-omxaac-test
@@ -52,7 +52,7 @@ bin/mm-vdec-omx-test
 bin/mm-venc-omx-test
 bin/mm-venc-omx-test720p
 bin/mm-video-driver-test
-bin/mm-video-encdvr-test
+bin/mm-video-encdrv-test
 
 lib/libcamera.so
 lib/liboemcamera.so
