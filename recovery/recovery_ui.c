@@ -66,16 +66,8 @@ int device_handle_key(int key_code, int visible) {
 	    case 114:
                 return HIGHLIGHT_UP;
 
-            case KEY_POWER:
-                if (ui_get_showing_back_button()) {
-                    return SELECT_ITEM;
-                }
-                if (!get_allow_toggle_display())
-                    return GO_BACK;
-                break;
-
-            //case KEY_MENU:
-	    case 158:
+            //case KEY_POWER:
+	    case 116:
                 return SELECT_ITEM;
             
 	    //case KEY_BACK
