@@ -5,4 +5,5 @@
 /cache          ext4	    /dev/block/mmcblk0p11     NULL                              ext3
 /data           ext4        /dev/block/mmcblk0p8      NULL                              ext3
 /system         ext4        /dev/block/mmcblk0p7      NULL                              ext3
+/recovery         ext4        /dev/block/mmcblk0p99      NULL                              ext3
 /sdcard	        vfat	    /dev/block/mmcblk1p1      /dev/block/mmcblk1                NULL

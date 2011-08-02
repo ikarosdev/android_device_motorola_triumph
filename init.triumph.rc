@@ -1,4 +1,4 @@
-on emmc
+on fs
 
     mkdir /system
     mkdir /data 0771 system system
@@ -19,22 +19,6 @@ on emmc
     mkdir /hidden/data 0771 system system
     devwait /dev/block/mmcblk0p9
     mount ext3 /dev/block/mmcblk0p9 /hidden/data nosuid nodev
-
-    chown system system /hidden/data/backup
-    chown system system /hidden/data/backup/backup_telespree.sh
-    chown system system /hidden/data/backup/backup_life_stat.sh
-    chown system system /hidden/data/backup/backup_act_date.sh
-    chown system system /hidden/data/backup/restore_telespree.sh
-    chown system system /hidden/data/backup/restore_life_stat.sh
-    chown system system /hidden/data/backup/restore_act_date.sh
-
-    chmod 0755 /hidden/data/backup
-    chmod 0755 /hidden/data/backup/backup_telespree.sh
-    chmod 0755 /hidden/data/backup/backup_life_stat.sh
-    chmod 0755 /hidden/data/backup/backup_act_date.sh
-    chmod 0755 /hidden/data/backup/restore_telespree.sh
-    chmod 0755 /hidden/data/backup/restore_life_stat.sh
-    chmod 0755 /hidden/data/backup/restore_act_date.sh
 
     mkdir /cache 0771 system system
     devwait /dev/block/mmcblk0p11
