@@ -59,11 +59,11 @@ TARGET_PREBUILT_KERNEL := device/motorola/triumph/kernel
 
 # Filesystem
 BOARD_SYSTEM_DEVICE := /dev/block/mmcblk0p7
-BOARD_SYSTEM_FILESYSTEM := ext3
+BOARD_SYSTEM_FILESYSTEM := ext4
 BOARD_DATA_DEVICE := /dev/block/mmcblk0p8
-BOARD_DATA_FILESYSTEM := ext3
+BOARD_DATA_FILESYSTEM := ext4
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p11
-BOARD_CACHE_FILESYSTEM := ext3
+BOARD_CACHE_FILESYSTEM := ext4
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
