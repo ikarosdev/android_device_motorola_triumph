@@ -70,8 +70,8 @@ int device_handle_key(int key_code, int visible) {
 	    case 116:
                 return SELECT_ITEM;
             
-	    //case KEY_BACK
-	    case 102:
+	    //case KEY_MENU
+	    case 158:
                 if (!get_allow_toggle_display())
                     return GO_BACK;
         }
