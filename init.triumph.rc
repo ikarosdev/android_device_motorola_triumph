@@ -1,33 +1,19 @@
 on fs
-
     mkdir /system
     mkdir /data 0771 system system
+    mkdir /hidden 0771 system system
+    mkdir /hidden/data 0771 system system
+    mkdir /cache 0771 system system
     mkdir /slate 0777 system system
     mkdir /persist 0771 system system
 
-    devwait /dev/block/mmcblk0p7
-    mount ext3 /dev/block/mmcblk0p7 /system ro
-    devwait /dev/block/mmcblk0p8
-    exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p8
-    exec /system/bin/e2fsck -f -j -a -y /dev/block/mmcblk0p8
-    mount ext3 /dev/block/mmcblk0p8 /data nosuid nodev
-
-    mkdir /hidden 0771 system system
-    devwait /dev/block/mmcblk0p10
-    mount ext3 /dev/block/mmcblk0p10 /hidden nosuid nodev
-
-    mkdir /hidden/data 0771 system system
-    devwait /dev/block/mmcblk0p9
-    mount ext3 /dev/block/mmcblk0p9 /hidden/data nosuid nodev
-
-    mkdir /cache 0771 system system
-    devwait /dev/block/mmcblk0p11
-    exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p11
-    exec /system/bin/e2fsck -f -j -a -y /dev/block/mmcblk0p11
-    mount ext3 /dev/block/mmcblk0p11 /cache nosuid nodev
+    mount ext3 /dev/block/mmcblk0p7 /system wait ro barrier=1
+    mount ext3 /dev/block/mmcblk0p8 /data wait ro barrier=1
+    mount ext3 /dev/block/mmcblk0p10 /hidden wait nosuid nodev barrier=1
+    mount ext3 /dev/block/mmcblk0p9 /hidden/data wait nosuid nodev barrier=1
+    mount ext3 /dev/block/mmcblk0p11 /cache wait nosuid nodev barrier=1
 
 on init
-
     chown compass system /dev/compass
     chmod 0777 /dev/compass
 
@@ -50,7 +36,6 @@ on init
 
 
 on boot
-
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
     write /proc/sys/vm/dirty_background_ratio  5
