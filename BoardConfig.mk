@@ -77,5 +77,3 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_MMCUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/motorola/triumph/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/motorola/triumph/recovery/minui/graphics.c
-BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/triumph/recovery_kernel

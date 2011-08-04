@@ -59,11 +59,11 @@ int device_handle_key(int key_code, int visible) {
     if (visible) {
         switch (key_code) {
             //case KEY_VOLUMEDOWN:
-	    case 115:
+	    case 114:
                 return HIGHLIGHT_DOWN;
 
             //case KEY_VOLUMEUP:
-	    case 114:
+	    case 115:
                 return HIGHLIGHT_UP;
 
             //case KEY_MENU:
