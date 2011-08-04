@@ -48,7 +48,7 @@ int device_toggle_display(volatile char* key_pressed, int key_code) {
         return 0;
         //return get_allow_toggle_display() && (key_code == KEY_HOME || key_code == KEY_MENU || key_code == KEY_END);
     }
-    return get_allow_toggle_display() && (key_code == KEY_HOME || key_code == KEY_MENU || key_code == KEY_POWER || key_code == KEY_END);
+    return get_allow_toggle_display() && (key_code == KEY_HOME || key_code == KEY_POWER || key_code == KEY_END);
 }
 
 int device_reboot_now(volatile char* key_pressed, int key_code) {
@@ -70,7 +70,7 @@ int device_handle_key(int key_code, int visible) {
 	    case 139:
                 return SELECT_ITEM;
             
-	    //case KEY_BACK
+	    case KEY_BACK
 	    case 158:
                 if (!get_allow_toggle_display())
                     return GO_BACK;
