@@ -66,11 +66,11 @@ int device_handle_key(int key_code, int visible) {
 	    case 114:
                 return HIGHLIGHT_UP;
 
-            //case KEY_POWER:
-	    case 116:
+            //case KEY_MENU:
+	    case 139:
                 return SELECT_ITEM;
             
-	    //case KEY_MENU
+	    //case KEY_BACK
 	    case 158:
                 if (!get_allow_toggle_display())
                     return GO_BACK;
