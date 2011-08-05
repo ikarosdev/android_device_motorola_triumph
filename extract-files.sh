@@ -128,4 +128,4 @@ for FILE in $FILES; do
 	adb pull system/$FILE ../../../vendor/motorola/triumph/proprietary/$FILE
 done
 
- 
+chmod 755 ../../../vendor/motorola/triumph/proprietary/bin/*
