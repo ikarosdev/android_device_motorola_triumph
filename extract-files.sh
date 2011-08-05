@@ -16,12 +16,20 @@ done
 FILES="
 bin/qmuxd
 bin/hci_qcomm_init
+bin/hostapd
+bin/hciattach
+bin/rmt_storage
+bin/netmgrd
+bin/wpdiagd
+bin/port_bridge
 
+bin/thermald
 bin/geomagneticd
 bin/orientationd
 bin/proximityd
 bin/lightd
 bin/hdmid
+bin/bluetoothd
 
 bin/mm-abl-test
 bin/mm-adec-omxaac-test

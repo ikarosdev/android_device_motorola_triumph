@@ -80,7 +80,18 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/geomagneticd:/system/bin/geomagneticd \
     vendor/motorola/triumph/proprietary/bin/orientationd:/system/bin/orientationd \
     vendor/motorola/triumph/proprietary/bin/proximityd:/system/bin/proximityd \
-    vendor/motorola/triumph/proprietary/bin/lightd:/system/bin/lightd
+    vendor/motorola/triumph/proprietary/bin/lightd:/system/bin/lightd \
+    vendor/motorola/triumph/proprietary/bin/thermald:/system/bin/thermald
+
+# other binaries
+PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/bin/hostapd:/system/bin/hostapd \
+    vendor/motorola/triumph/proprietary/bin/hciattach:/system/bin/hciattach \
+    vendor/motorola/triumph/proprietary/bin/netmgrd:/system/bin/netmgrd \
+    vendor/motorola/triumph/proprietary/bin/rmt_storage:/system/bin/rmt_storage \
+    vendor/motorola/triumph/proprietary/bin/bluetoothd:/system/bin/bluetoothd \
+    vendor/motorola/triumph/proprietary/bin/port_bridge:/system/bin/port_bridge \
+    vendor/motorola/triumph/proprietary/bin/wpdiagd:/system/bin/wpdiagd
 
 # HDMI binary
     vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid
@@ -264,6 +275,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Triumph uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
+
+# we have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product, build/target/product/full.mk)
 
