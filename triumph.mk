@@ -187,7 +187,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libaudio.so:/system/lib/libaudio.so \
     vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/obj/lib/libaudioalsa.so \
     vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \
-    vendor/motorola/triumph/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so
+    vendor/motorola/triumph/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so \
+    vendor/motorola/triumph/proprietary/lib/liba2dp.so:/system/lib/liba2dp.so
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -204,6 +205,12 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/include/etc/hostapd/hostapd.conf:/system/etc/hostapd/hostapd.conf \
     device/motorola/triumph/include/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
     device/motorola/triumph/include/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+
+# GPS
+PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libloc_api.so:/system/lib/libloc_api.so \
+    vendor/motorola/triumph/proprietary/lib/libloc_api-rpc.so:/system/lib/libloc_api-rpc.so \
+    vendor/motorola/triumph/proprietary/lib/libloc_ext.so:/system/lib/libloc_ext.so
 
 # OMX
 PRODUCT_COPY_FILES += \
@@ -251,7 +258,23 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libwmsts.so:/system/lib/libwmsts.so \
     vendor/motorola/triumph/proprietary/lib/libpbmlib.so:/system/lib/libpbmlib.so \
     vendor/motorola/triumph/proprietary/lib/libdss.so:/system/lib/libdss.so \
-    vendor/motorola/triumph/proprietary/lib/libauth.so:/system/lib/libauth.so
+    vendor/motorola/triumph/proprietary/lib/libauth.so:/system/lib/libauth.so \
+    vendor/motorola/triumph/proprietary/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
+    vendor/motorola/triumph/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \
+    vendor/motorola/triumph/proprietary/lib/libqmiservices.so:/system/lib/libqmiservices.so \
+    vendor/motorola/triumph/proprietary/lib/libqdp.so:/system/lib/libqdp.so \
+    vendor/motorola/triumph/proprietary/lib/libidl.so:/system/lib/libidl.so \
+    vendor/motorola/triumph/proprietary/lib/libdsutils.so:/system/lib/libdsutils.so \
+    vendor/motorola/triumph/proprietary/lib/liboem_rapi.so:/system/lib/liboem_rapi.so \
+    vendor/motorola/triumph/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
+    vendor/motorola/triumph/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
+    vendor/motorola/triumph/proprietary/lib/liboncrpc.so:/system/lib/liboncrpc.so \
+    vendor/motorola/triumph/proprietary/lib/libdpapi.so:/system/lib/libpdapi.so \
+    vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so
+
+# Other libs
+PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libgemini.so:/system/lib/libgemini.so
 
 # xml config
 PRODUCT_COPY_FILES += \

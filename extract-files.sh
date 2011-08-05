@@ -71,6 +71,7 @@ lib/libmmipl.so
 lib/libaudio.so
 lib/libaudioalsa.so
 lib/libaudioeq.so
+lib/liba2dp.so
 
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
@@ -107,9 +108,12 @@ lib/libril.so
 lib/libril-qc-1.so
 lib/libreference-ril.so
 lib/libril-qcril-hook-oem.so
+lib/libril-qc-1.so
+lib/libril-qc-qmi-1.so
 lib/libdiag.so
 lib/liboncrpc.so
 lib/libqmi.so
+lib/libqmiservices.so
 lib/libdsm.so
 lib/libqueue.so
 lib/libdll.so
@@ -123,6 +127,20 @@ lib/libwmsts.so
 lib/libpbmlib.so
 lib/libdss.so
 lib/libauth.so
+lib/libqdp.so
+lib/libidl.so
+lib/libdsutils.so
+lib/liboem_rapi.so
+lib/libdsi_netctrl.so
+lib/libnetmgr.so
+lib/liboncrpc.so
+lib/libpdapi.so
+lib/libpdsm_atl.so
+
+lib/libgemini
+lib/libloc_api.so
+lib/libloc_api-rpc.so
+lib/libloc_ext.so
 "
 
 for FILE in $FILES; do

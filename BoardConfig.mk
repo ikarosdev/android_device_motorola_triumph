@@ -14,6 +14,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOOTLOADER_BOARD_NAME := triumph
 
 TARGET_USES_2G_VM_SPLIT := true
+TARGET_PROVIDES_LIBRIL := vendor/motorola/triumph/proprietary/lib/libril.so
 
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
@@ -24,8 +25,6 @@ BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
 BOARD_USE_QCOM_PMEM := true
-
-BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
