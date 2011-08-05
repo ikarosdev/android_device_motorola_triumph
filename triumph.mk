@@ -70,6 +70,32 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/include/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/motorola/triumph/include/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
+# Keychars
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/keychars/fih_headsethook.kcm.bin:system/usr/keychars/fih_headsethook.kcm.bin \
+    device/motorola/triumph/keychars/fih_ringswitch.kcm.bin:system/usr/keychars/fih_ringswitch.kcm.bin \
+    device/motorola/triumph/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/motorola/triumph/keychars/sf6_kybd.kcm.bin:system/usr/keychars/sf6_kybd.kcm.bin \
+    device/motorola/triumph/keychars/sf8_kybd.kcm.bin:system/usr/keychars/sf8_kybd.kcm.bin \
+    device/motorola/triumph/keychars/surf_keypad.kcm.bin:system/usr/keychars/surf_keypad.kcm.bin \
+    device/motorola/triumph/keychars/surf_keypad_querty.kcm.bin:system/usr/keychars/surf_keypad_querty.kcm.bin \
+    device/motorola/triumph/keychars/surf_keypad_numeric.kcm.bin:system/usr/keychars/surf_keypad_numeric.kcm.bin
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/keychars/fih_headsethook.kl:system/usr/keychars/fih_headsethook.kl \
+    device/motorola/triumph/keychars/fih_ringswitch.kl:system/usr/keychars/fih_ringswitch.kl \
+    device/motorola/triumph/keychars/fluid-keypad.kl:system/usr/keychars/fluid-keypad.kl \
+    device/motorola/triumph/keychars/fbx_kybd.kl:system/usr/keychars/fbx_kybd.kl \
+    device/motorola/triumph/keychars/qwerty.kl:system/usr/keychars/qwerty.kl \
+    device/motorola/triumph/keychars/sf6_kybd.kl:system/usr/keychars/sf6_kybd.kl \
+    device/motorola/triumph/keychars/sf8_kybd.kl:system/usr/keychars/sf8_kybd.kl \
+    device/motorola/triumph/keychars/msm_tma300_ts.kl:system/usr/keychars/msm_tma300_ts.kl \
+    device/motorola/triumph/keychars/AVRCP.kl:system/usr/keychars/AVRCP.kl \
+    device/motorola/triumph/keychars/7k_handset.kl:system/usr/keychars/7k_handset.kl \
+    device/motorola/triumph/keychars/surf_keypad.kl:system/usr/keychars/surf_keypad.kl
+
 # HW init
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/qmuxd:/system/bin/qmuxd \
