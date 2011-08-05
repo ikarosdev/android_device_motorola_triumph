@@ -117,9 +117,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/bluetoothd:/system/bin/bluetoothd \
     vendor/motorola/triumph/proprietary/bin/port-bridge:/system/bin/port-bridge \
     vendor/motorola/triumph/proprietary/bin/wpdiagd:/system/bin/wpdiagd \
-    vendor/motorola/triumph/proprietary/bin/btwlancoex:/system/bin/btwlancoex
-
-# HDMI binary
+    vendor/motorola/triumph/proprietary/bin/btwlancoex:/system/bin/btwlancoex \
     vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid
 
 # MM binaries
