@@ -22,6 +22,7 @@ bin/rmt_storage
 bin/netmgrd
 bin/wpdiagd
 bin/port_bridge
+bin/btwlancoex
 
 bin/thermald
 bin/geomagneticd
