@@ -21,7 +21,7 @@ bin/hciattach
 bin/rmt_storage
 bin/netmgrd
 bin/wpdiagd
-bin/port_bridge
+bin/port-bridge
 bin/btwlancoex
 
 bin/thermald
