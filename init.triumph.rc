@@ -10,7 +10,7 @@ on fs
     mount ext3 /dev/block/mmcblk0p7 /system ro data=ordered
     exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p8
     exec /system/bin/e2fsck -f -j -a -y /dev/block/mmcblk0p8
-    mount ext3 /dev/block/mmcblk0p8 /data ro nosuid nodev data=ordered
+    mount ext3 /dev/block/mmcblk0p8 /data nosuid nodev data=ordered
     mount ext3 /dev/block/mmcblk0p10 /hidden nosuid nodev data=ordered
     mount ext3 /dev/block/mmcblk0p9 /hidden/data nosuid nodev data=ordered
     exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p11
