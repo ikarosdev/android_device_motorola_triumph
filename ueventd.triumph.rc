@@ -18,8 +18,8 @@
 #sensors
 /dev/akm8975_daemon     0640    compass     system
 /dev/akm8975_aot        0640    compass     system
-/dev/yas529		        0640    compass     system
-/dev/bma150			    0640    compass     system
+/dev/yas529				0640    compass     system
+/dev/bma150				0640    compass     system
 /dev/ltr502als_alsps    0640    compass     system
 
 #audio
