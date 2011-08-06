@@ -290,18 +290,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perfomance tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.heapsize=48m \
+    dalvik.vm.heapsize=32m \
     persist.sys.use_dithering=1 \
+	ro.sf.lcd_density=240 \
     ro.compcache.default=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libril-qc-1.so \
-    rild.libargs=-d /dev/smd0 \
-    wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=60 \
-    ro.com.android.dataroaming=false \
-    ro.sf.lcd_density=240 \
-    debug.sf.hw=1
 
 # Properties taken from build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -309,18 +301,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-motorola \
     ro.com.google.clientidbase.am=android-motorola \
     ro.com.google.clientidbase.ms=android-motorola \
-    ro.com.google.clientidbase.gmm=android-motorola \
-    ro.cdma.home.operator.alpha=Virgin Mobile \
-    gsm.operator.alpha=Virgin Mobile \
-    ro.telephony.gsm.ecclist=110,112,119,911 \
-    ro.telephony.cdma.ecclist=110,112,119,911 \
-    ro.telephony.ecclist=08,000,110,112,118,119,911,999 \
-    ro.telephony.num.auto.hyphen=true \
-    ro.telephony.gsm.spn.shortname=true \
-    gsm.operator.iso-country=us \
-    gsm.operator.numeric=311490 \
-    ro.cdma.home.operator.numeric=311490 \
-    keyguard.no_require_sim=true
+    ro.com.google.clientidbase.gmm=android-motorola
 
 # Triumph uses high-density artwork where available
 PRODUCT_LOCALES += hdpi

@@ -1,3 +1,45 @@
 #
 # system.prop for triumph
 #
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+DEVICE_PROVISIONED=1
+debug.sf.hw=1
+ro.dev.dmm=1
+
+ro.cdma.home.operator.alpha=Virgin Mobile
+gsm.operator.alpha=Virgin Mobile
+gsm.operator.iso-country=us
+gsm.operator.numeric=311490
+ro.telephony.gsm.ecclist=110,112,119,911
+ro.telephony.cdma.ecclist=110,112,119,911
+ro.telephony.ecclist=08,000,110,112,118,119,911,999
+ro.telephony.num.auto.hyphen=true
+ro.telephony.gsm.spn.shortname=true
+ro.cdma.home.operator.numeric=311490
+
+service.config.gsensor_cal=1
+libcamera.orientation=0
+libcamera.testmode.colorbar=0
+service.config.wifi=0
+wimax.interface=wm0
+
+lpa.decode=false
+ro.hdmi.enable=true
+
+ro.use_data_netmgrd=true
+ro.config.ehrpd=true
+keyguard.no_require_sim=true
+
+wifi.supplicant_scan_interval=90
+ro.telephony.call_ring.delay=1000
+wifi.wapi=0
