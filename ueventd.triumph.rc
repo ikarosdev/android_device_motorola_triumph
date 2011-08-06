@@ -1,5 +1,6 @@
 /dev/system_bus_freq    0660    system      system
 /dev/cpu_dma_latency    0660    system      system
+/dev/rfkill             0640    root        root
 
 #radio
 /dev/oncrpc/*           0660    radio       system
@@ -9,7 +10,7 @@
 /dev/smd0               0640    radio       radio
 /dev/qmi0               0640    radio       radio
 /dev/qmi1               0640    radio       radio
-/dev/qmi2               0640    radio       radio
+/dev/qmi2               0640    radio       radio 
 
 #camera
 /dev/msm_camera/*       0660    system      system

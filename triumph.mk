@@ -175,17 +175,17 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
     vendor/motorola/triumph/proprietary/lib/libcamera.so:/system/lib/libcamera.so \
-    vendor/motorola/triumph/proprietary/lib/libcamera.so:/obj/lib/libcamera.so \
     vendor/motorola/triumph/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \
     vendor/motorola/triumph/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     vendor/motorola/triumph/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so
 
 # Audio
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/proprietary/lib/libaudio.so:/obj/lib/libaudio.so \
+    vendor/motorola/triumph/proprietary/lib/libaudio.so:obj/lib/libaudio.so \
     vendor/motorola/triumph/proprietary/lib/libaudio.so:/system/lib/libaudio.so \
-    vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/obj/lib/libaudioalsa.so \
+    vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \
     vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \
     vendor/motorola/triumph/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so \
     vendor/motorola/triumph/proprietary/lib/liba2dp.so:/system/lib/liba2dp.so
@@ -239,6 +239,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libril.so:obj/lib/libril.so \
     vendor/motorola/triumph/proprietary/lib/libril.so:/system/lib/libril.so \
     vendor/motorola/triumph/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \
     vendor/motorola/triumph/proprietary/lib/libreference-ril.so:/system/lib/libreference-ril.so \

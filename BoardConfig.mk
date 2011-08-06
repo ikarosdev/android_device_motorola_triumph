@@ -13,7 +13,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOOTLOADER_BOARD_NAME := triumph
 
-TARGET_USES_2G_VM_SPLIT := true
 TARGET_PROVIDES_LIBRIL := vendor/motorola/triumph/proprietary/lib/libril.so
 
 # Releasetools
@@ -61,6 +60,7 @@ BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
 # Recovery
+BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_USES_MMCUTILS := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/motorola/triumph/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/motorola/triumph/recovery/minui/graphics.c
@@ -76,7 +76,6 @@ BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_RECOVERY_PARTITION := true
 
 BOARD_KERNEL_CMDLINE := console=ttyMSM1 androidboot.hardware=qcom
 BOARD_KERNEL_BASE := 0x00200000
