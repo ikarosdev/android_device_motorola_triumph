@@ -234,8 +234,6 @@ on property:ro.emmc=1
 service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
 
 service qmuxd /system/bin/qmuxd
-    user radio
-    group radio
 
 service netmgrd /system/bin/netmgrd
 
