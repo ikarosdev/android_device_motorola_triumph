@@ -13,6 +13,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOOTLOADER_BOARD_NAME := triumph
 #TARGET_USES_2G_VM_SPLIT := true
+TARGET_USES_OLD_LIBSENSORS_HAL := true
 
 # Use stock libril
 TARGET_PROVIDES_LIBRIL := vendor/motorola/triumph/proprietary/lib/libril.so
