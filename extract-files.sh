@@ -23,6 +23,7 @@ bin/netmgrd
 bin/wpdiagd
 bin/port-bridge
 bin/btwlancoex
+bin/ds_fmc_appd
 
 bin/thermald
 bin/geomagneticd

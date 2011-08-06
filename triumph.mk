@@ -118,7 +118,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/port-bridge:/system/bin/port-bridge \
     vendor/motorola/triumph/proprietary/bin/wpdiagd:/system/bin/wpdiagd \
     vendor/motorola/triumph/proprietary/bin/btwlancoex:/system/bin/btwlancoex \
-    vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid
+    vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid \
+    vendor/motorola/triumph/proprietary/bin/ds_fmc_appd:/system/bin/ds_fmc_appd
 
 # MM binaries
 PRODUCT_COPY_FILES += \

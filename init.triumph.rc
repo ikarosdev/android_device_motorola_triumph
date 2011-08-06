@@ -1,4 +1,5 @@
 on fs
+#EMMC related
     mkdir /system
     mkdir /data 0771 system system
     mkdir /hidden 0771 system system
@@ -7,15 +8,11 @@ on fs
     mkdir /slate 0777 system system
     mkdir /persist 0771 system system
 
-    mount ext3 /dev/block/mmcblk0p7 /system ro data=ordered
-    exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p8
-    exec /system/bin/e2fsck -f -j -a -y /dev/block/mmcblk0p8
-    mount ext3 /dev/block/mmcblk0p8 /data nosuid nodev data=ordered
-    mount ext3 /dev/block/mmcblk0p10 /hidden nosuid nodev data=ordered
+    mount ext3 /dev/block/mmcblk0p7 /system wait ro data=ordered
+    mount ext3 /dev/block/mmcblk0p8 /data wait nosuid nodev data=ordered
+    mount ext3 /dev/block/mmcblk0p10 /hidden wait nosuid nodev data=ordered
     mount ext3 /dev/block/mmcblk0p9 /hidden/data nosuid nodev data=ordered
-    exec /system/bin/tune2fs -c 1 /dev/block/mmcblk0p11
-    exec /system/bin/e2fsck -f -j -a -y /dev/block/mmcblk0p11
-    mount ext3 /dev/block/mmcblk0p11 /cache nosuid nodev data=ordered
+    mount ext3 /dev/block/mmcblk0p11 /cache wait nosuid nodev data=ordered
 
 on init
     chown compass system /dev/compass
@@ -31,7 +28,7 @@ on init
     chmod 0666 /sys/module/akm8975/parameters/als_enabled
     chmod 0666 /sys/module/akm8975/parameters/ps_enabled
 
-    #chmod 0777 /system/bin/CIR_Test
+    chmod 0777 /system/bin/CIR_Test
     chmod 0666 /dev/ttyHS1
     chmod 0666 /dev/ir_mcu
 
@@ -96,6 +93,81 @@ on boot
 
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/green/brightness
+
+	chown compass system /dev/yas529
+    chmod 0666 /dev/yas529
+    chown compass system /dev/bma150
+    chmod 0666 /dev/ltr502als_alsps
+      
+    chmod 0664 /sys/class/input/input2/enable
+    chmod 0664 /sys/class/input/input2/data
+    chmod 0664 /sys/class/input/input2/name
+    chown system input /sys/class/input/input2/enable
+	chown system input /sys/class/input/input2/delay
+	chown system input /sys/class/input/input2/wake
+    
+    chmod 0664 /sys/class/input/input3/enable
+    chmod 0664 /sys/class/input/input3/data
+    chmod 0664 /sys/class/input/input3/name
+    chown system input /sys/class/input/input3/enable
+	chown system input /sys/class/input/input3/delay
+	chown system input /sys/class/input/input3/wake
+	
+	chmod 0664 /sys/class/input/input4/enable
+    chmod 0664 /sys/class/input/input4/data
+    chmod 0664 /sys/class/input/input4/name
+	chown system input /sys/class/input/input4/enable
+	chown system input /sys/class/input/input4/delay
+	chown system input /sys/class/input/input4/wake
+	
+	chmod 0664 /sys/class/input/input5/enable
+    chmod 0664 /sys/class/input/input5/data
+    chmod 0664 /sys/class/input/input5/name
+	chown system input /sys/class/input/input5/enable
+	chown system input /sys/class/input/input5/delay
+	chown system input /sys/class/input/input5/wake
+
+   	chmod 0664 /sys/class/input/input6/enable
+    chmod 0664 /sys/class/input/input6/data
+    chmod 0664 /sys/class/input/input6/name	
+	chown system input /sys/class/input/input6/enable
+	chown system input /sys/class/input/input6/delay
+	chown system input /sys/class/input/input6/wake
+
+    chmod 0664 /sys/class/input/input7/enable
+    chmod 0664 /sys/class/input/input7/data
+    chmod 0664 /sys/class/input/input7/name	
+	chown system input /sys/class/input/input7/enable
+	chown system input /sys/class/input/input7/delay
+	chown system input /sys/class/input/input7/wake
+
+    chmod 0664 /sys/class/input/input8/enable
+    chmod 0664 /sys/class/input/input8/data
+    chmod 0664 /sys/class/input/input8/name	
+	chown system input /sys/class/input/input8/enable
+	chown system input /sys/class/input/input8/delay
+	chown system input /sys/class/input/input8/wake
+	
+    chmod 0664 /sys/class/input/input9/enable
+    chmod 0664 /sys/class/input/input9/data
+    chmod 0664 /sys/class/input/input9/name
+	chown system input /sys/class/input/input9/enable
+	chown system input /sys/class/input/input9/delay
+	chown system input /sys/class/input/input9/wake
+	
+    chmod 0664 /sys/class/input/input10/enable
+    chmod 0664 /sys/class/input/input10/data
+    chmod 0664 /sys/class/input/input10/name
+	chown system input /sys/class/input/input10/enable
+	chown system input /sys/class/input/input10/delay
+	chown system input /sys/class/input/input10/wake
+	
+   	chmod 0664 /sys/class/input/input11/enable
+    chmod 0664 /sys/class/input/input11/data
+    chmod 0664 /sys/class/input/input11/name
+	chown system input /sys/class/input/input11/enable
+	chown system input /sys/class/input/input11/delay
+	chown system input /sys/class/input/input11/wake
 
     chmod 4777 /system/bin/mm-audio-mvs-test-int
     chmod 4777 /system/bin/mm-audio-mvs-test-ext
