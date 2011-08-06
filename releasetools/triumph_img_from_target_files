@@ -43,7 +43,7 @@ import zipfile
 if not hasattr(os, "SEEK_SET"):
   os.SEEK_SET = 0
 
-import common
+import triumph_common as common
 
 OPTIONS = common.OPTIONS
 

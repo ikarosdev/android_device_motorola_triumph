@@ -69,8 +69,8 @@ import tempfile
 import time
 import zipfile
 
-import common
-import edify_generator
+import triumph_common as common
+import triumph_edify_generator as edify_generator
 
 OPTIONS = common.OPTIONS
 OPTIONS.package_key = "build/target/product/security/testkey"
