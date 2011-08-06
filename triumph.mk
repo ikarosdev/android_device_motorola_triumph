@@ -197,8 +197,8 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/modules/libra.ko:/system/wifi/libra.ko \
-    device/motorola/triumph/modules/librasdioif.ko:/system/wifi/librasdioif.ko \
+    device/motorola/triumph/modules/libra.ko:/system/lib/modules/libra.ko \
+    device/motorola/triumph/modules/librasdioif.ko:/system/lib/modules/librasdioif.ko \
     device/motorola/triumph/include/etc/firmware/wlan/qcom_fw.bin:/system/etc/firmware/wlan/qcom_fw.bin \
     device/motorola/triumph/include/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
     device/motorola/triumph/include/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
