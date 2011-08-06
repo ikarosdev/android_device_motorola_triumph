@@ -138,7 +138,7 @@ lib/liboncrpc.so
 lib/libpdapi.so
 lib/libpdsm_atl.so
 
-lib/libgemini
+lib/libgemini.so
 lib/libloc_api.so
 lib/libloc_api-rpc.so
 lib/libloc_ext.so
