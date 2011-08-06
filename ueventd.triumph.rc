@@ -6,21 +6,24 @@
 /dev/smdcntl0           0640    radio       radio
 /dev/smdcntl1           0640    radio       radio
 /dev/smdcntl2           0640    radio       radio
-/dev/radio_feedback     0660    radio       radio
 /dev/smd0               0640    radio       radio
-/dev/smd9               0600    system      system
 /dev/qmi0               0640    radio       radio
 /dev/qmi1               0640    radio       radio
 /dev/qmi2               0640    radio       radio
 
+#camera
+/dev/msm_camera/*       0660    system      system
+
 #sensors
 /dev/akm8975_daemon     0640    compass     system
 /dev/akm8975_aot        0640    compass     system
+/dev/yas529	        0640    compass     system
 
 #audio
 /dev/msm_audio_dev_ctrl 0660    system      audio
 /dev/msm_acdb           0660    system      audio
 /dev/msm_pcm_lp_dec     0660    system      audio
+/dev/pmem_audio         0660    system      audio
 /dev/pmem_adsp*         0660    system      audio
 /dev/gemini*	        0660    system      audio
 /dev/adsp/*             0660    system      audio
