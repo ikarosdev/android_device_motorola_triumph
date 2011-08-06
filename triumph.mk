@@ -210,7 +210,7 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libloc_api.so:/system/lib/libloc_api.so \
-    vendor/motorola/triumph/proprietary/lib/libloc_api-rpc.so:/system/lib/libloc-rpc.so \
+    vendor/motorola/triumph/proprietary/lib/libloc-rpc.so:/system/lib/libloc-rpc.so \
     vendor/motorola/triumph/proprietary/lib/libloc_ext.so:/system/lib/libloc_ext.so
 
 # OMX
