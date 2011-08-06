@@ -271,7 +271,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
     vendor/motorola/triumph/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
     vendor/motorola/triumph/proprietary/lib/liboncrpc.so:/system/lib/liboncrpc.so \
-    vendor/motorola/triumph/proprietary/lib/libdpapi.so:/system/lib/libpdapi.so \
+    vendor/motorola/triumph/proprietary/lib/libpdapi.so:/system/lib/libpdapi.so \
     vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so \
     vendor/motorola/triumph/proprietary/lib/libgemini.so:/system/lib/libgemini.so
 
