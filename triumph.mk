@@ -272,10 +272,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
     vendor/motorola/triumph/proprietary/lib/liboncrpc.so:/system/lib/liboncrpc.so \
     vendor/motorola/triumph/proprietary/lib/libdpapi.so:/system/lib/libpdapi.so \
-    vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so
-
-# Other libs
-PRODUCT_COPY_FILES += \
+    vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so \
     vendor/motorola/triumph/proprietary/lib/libgemini.so:/system/lib/libgemini.so
 
 # xml config
@@ -287,7 +284,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072
 
-# Perfomance tweaks
+# Perfomance tweaks and misc
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=32m \
