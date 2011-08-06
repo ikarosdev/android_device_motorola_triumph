@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
 # Init files
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/init.triumph.rc:root/init.triumph.rc \
-    device/motorola/triumph/ueventd.qcom.rc:root/ueventd.qcom.rc
+    device/motorola/triumph/ueventd.triumph.rc:root/ueventd.triumph.rc
 
 # vold
 PRODUCT_COPY_FILES += \
