@@ -238,10 +238,6 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
-# For the fake CD I'm guessing
-    losetup /dev/block/loop1 /hidden/custom.iso
-    write /sys/devices/platform/usb_mass_storage/lun1/file /dev/block/loop1
-
 on property:ro.service.ckpd.enable=1
     start ckpd
 
