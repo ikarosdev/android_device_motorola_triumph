@@ -62,12 +62,12 @@ PRODUCT_COPY_FILES += \
 
 # init scripts
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
-    device/motorola/triumph/include/etc/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh\
-    device/motorola/triumph/include/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
-    device/motorola/triumph/include/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
-    device/motorola/triumph/include/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
-    device/motorola/triumph/include/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
+    device/motorola/triumph/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
+    device/motorola/triumph/prebuilt/etc/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh\
+    device/motorola/triumph/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.fm.sh \
+    device/motorola/triumph/prebuilt/etc/init.qcom.sdio.sf6.sh:/system/etc/init.qcom.sdio.sf6.sh \
+    device/motorola/triumph/prebuilt/etc/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
+    device/motorola/triumph/prebuilt/etc/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
 # Keychars
 PRODUCT_COPY_FILES += \
@@ -164,15 +164,15 @@ PRODUCT_COPY_FILES += \
 
 # Video firmware
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_command_control.fw:/system/etc/firmware/vidc_720p_command_control.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_h263_dec_mc.fw:/system/etc/firmware/vidc_720p_h263_dec_mc.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_h264_dec_mc.fw:/system/etc/firmware/vidc_720p_h264_dec_mc.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_h264_enc_mc.fw:/system/etc/firmware/vidc_720p_h264_enc_mc.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_mp4_dec_mc.fw:/system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_mp4_enc_mc.fw:/system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
-    device/motorola/triumph/include/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
-    device/motorola/triumph/include/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
-    device/motorola/triumph/include/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_command_control.fw:/system/etc/firmware/vidc_720p_command_control.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_h263_dec_mc.fw:/system/etc/firmware/vidc_720p_h263_dec_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_h264_dec_mc.fw:/system/etc/firmware/vidc_720p_h264_dec_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_h264_enc_mc.fw:/system/etc/firmware/vidc_720p_h264_enc_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_mp4_dec_mc.fw:/system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_mp4_enc_mc.fw:/system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
+    device/motorola/triumph/prebuilt/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -199,13 +199,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/modules/libra.ko:/system/lib/modules/libra.ko \
     device/motorola/triumph/modules/librasdioif.ko:/system/lib/modules/librasdioif.ko \
-    device/motorola/triumph/include/etc/firmware/wlan/qcom_fw.bin:/system/etc/firmware/wlan/qcom_fw.bin \
-    device/motorola/triumph/include/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
-    device/motorola/triumph/include/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
-    device/motorola/triumph/include/etc/firmware/wlan/cfg.dat:/system/etc/firmware/wlan/cfg.dat \
-    device/motorola/triumph/include/etc/hostapd/hostapd.conf:/system/etc/hostapd/hostapd.conf \
-    device/motorola/triumph/include/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
-    device/motorola/triumph/include/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+    device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_fw.bin:/system/etc/firmware/wlan/qcom_fw.bin \
+    device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
+    device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
+    device/motorola/triumph/prebuilt/etc/firmware/wlan/cfg.dat:/system/etc/firmware/wlan/cfg.dat \
+    device/motorola/triumph/prebuilt/etc/hostapd/hostapd.conf:/system/etc/hostapd/hostapd.conf \
+    device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
+    device/motorola/triumph/prebuilt/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -277,7 +277,7 @@ PRODUCT_COPY_FILES += \
 
 # xml config
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/include/etc/media_profiles.xml:system/etc/media_profiles.xml
+    device/motorola/triumph/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
