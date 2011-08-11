@@ -81,6 +81,7 @@ lib/egl/libq3dtools_adreno200.so
 lib/libgsl.so
 
 lib/hw/sensors.qcom.so
+lib/hw/gralloc.msm7k.so
 
 lib/libOmxEvrcEnc.so
 lib/libOmxAacDec.so

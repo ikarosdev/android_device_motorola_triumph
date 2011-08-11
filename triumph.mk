@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     Term \
     librs_jni \
     gps.triumph \
-    gralloc.msm7x30 \
     lights.msm7x30 \
     overlay.default \
     libOmxCore \
@@ -36,8 +35,8 @@ PRODUCT_PACKAGES += \
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/init.triumph.rc:root/init.triumph.rc \
-    device/motorola/triumph/ueventd.triumph.rc:root/ueventd.triumph.rc
+    device/motorola/triumph/init.qcom.rc:root/init.qcom.rc \
+    device/motorola/triumph/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # vold
 PRODUCT_COPY_FILES += \
@@ -160,7 +159,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/motorola/triumph/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     vendor/motorola/triumph/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    vendor/motorola/triumph/proprietary/lib/libgsl.so:/system/lib/libgsl.so
+    vendor/motorola/triumph/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
+    vendor/motorola/triumph/proprietary/lib/hw/gralloc.msm7k.so:/system/lib/hw/gralloc.triumph.so
 
 # Video firmware
 PRODUCT_COPY_FILES += \
@@ -199,6 +199,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/modules/libra.ko:/system/lib/modules/libra.ko \
     device/motorola/triumph/modules/librasdioif.ko:/system/lib/modules/librasdioif.ko \
+    device/motorola/triumph/modules/libra_ftm.ko:/system/lib/modules/libra_ftm.ko \
     device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_fw.bin:/system/etc/firmware/wlan/qcom_fw.bin \
     device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
     device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
