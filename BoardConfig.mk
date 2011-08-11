@@ -3,6 +3,8 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/motorola/triumph/BoardConfigVendor.mk
 
+TARGET_SPECIFIC_HEADER_PATH := device/motorola/triumph/include
+
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm7x30
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -11,7 +13,9 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
+
 TARGET_BOOTLOADER_BOARD_NAME := triumph
+
 TARGET_USES_2G_VM_SPLIT := true
 TARGET_USES_OLD_LIBSENSORS_HAL := true
 
