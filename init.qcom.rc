@@ -87,7 +87,7 @@ on boot
     chmod 0666 /sys/class/rfkill/rfkill1/state
     chmod 0666 /system/etc/hostapd/hostapd.conf
 
-    # Create the directories used by the Wireless subsystem
+    # WIFI filesystem structure
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
