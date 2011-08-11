@@ -27,6 +27,7 @@ PRODUCT_PACKAGES += \
     Term \
     librs_jni \
     gps.triumph \
+    gralloc.msm7x30 \
     lights.msm7x30 \
     overlay.default \
     libOmxCore \
@@ -159,8 +160,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/motorola/triumph/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     vendor/motorola/triumph/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    vendor/motorola/triumph/proprietary/lib/libgsl.so:/system/lib/libgsl.so \
-    vendor/motorola/triumph/proprietary/lib/hw/gralloc.msm7k.so:/system/lib/hw/gralloc.triumph.so
+    vendor/motorola/triumph/proprietary/lib/libgsl.so:/system/lib/libgsl.so
 
 # Video firmware
 PRODUCT_COPY_FILES += \
@@ -313,5 +313,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := motorola_triumph
 PRODUCT_DEVICE := triumph
 PRODUCT_BRAND := Motorola
-PRODUCT_MODEL := MOTWX435KT
+PRODUCT_MODEL := WX435
 PRODUCT_MANUFACTURER := Motorola
