@@ -19,7 +19,6 @@
 #define MSMFB_IOCTL_MAGIC 'm'
 #define MSMFB_GRP_DISP          _IOW(MSMFB_IOCTL_MAGIC, 1, unsigned int)
 #define MSMFB_BLIT              _IOW(MSMFB_IOCTL_MAGIC, 2, unsigned int)
-#ifdef CONFIG_MSM_MDP40
 #define MSMFB_SUSPEND_SW_REFRESHER _IOW(MSMFB_IOCTL_MAGIC, 128, unsigned int)
 #define MSMFB_RESUME_SW_REFRESHER _IOW(MSMFB_IOCTL_MAGIC, 129, unsigned int)
 #define MSMFB_CURSOR _IOW(MSMFB_IOCTL_MAGIC, 130, struct fb_cursor)
@@ -48,8 +47,8 @@
 #define MSMFB_OVERLAY_CHANGE_ZORDER_VG_PIPES	_IOW(MSMFB_IOCTL_MAGIC, 146, unsigned int)
 #define MSMFB_OVERLAY_3D       _IOWR(MSMFB_IOCTL_MAGIC, 147, \
 						struct msmfb_overlay_3d)
-
-#endif
+#define MSMFB_OVERLAY_PLAYED _IOWR(MSMFB_IOCTL_MAGIC, 148, int)
+#define MSMFB_MDP_HW_REVISION _IOWR(MSMFB_IOCTL_MAGIC, 149, int)
 
 enum {
 	MDP_RGB_565,      // RGB 565 planer
@@ -64,10 +63,8 @@ enum {
 	MDP_RGBA_8888,    // ARGB 888
 	MDP_BGRA_8888,    // ARGB 888
 	MDP_RGBX_8888,    // RGBX 888
-#ifdef CONFIG_MSM_MDP40
 	MDP_Y_CRCB_H2V2_TILE,  /* Y and CrCb, pseudo planer tile */
 	MDP_Y_CBCR_H2V2_TILE,  /* Y and CbCr, pseudo planer tile */
-#endif
 	MDP_Y_CR_CB_H2V2,  /* Y, Cr and Cb, planar */
 	MDP_Y_CB_CR_H2V2,  /* Y, Cb and Cr, planar */
 	MDP_IMGTYPE_LIMIT, // Non valid image type after this enum
@@ -167,9 +164,7 @@ struct mdp_blit_req {
 	uint32_t alpha;
 	uint32_t transp_mask;
 	uint32_t flags;
-#ifdef CONFIG_MSM_MDP40
 	int sharpening_strength;  /* -127 <--> 127, default 64 */
-#endif
 };
 
 struct mdp_blit_req_list {
@@ -179,7 +174,6 @@ struct mdp_blit_req_list {
 
 #define MSMFB_DATA_VERSION 2
 
-#ifdef CONFIG_MSM_MDP40
 struct mdp_histogram {
 	uint32_t frame_cnt;
 	uint32_t bin_cnt;
@@ -242,5 +236,5 @@ struct mdp_page_protection {
 int get_fb_phys_info(unsigned long *start, unsigned long *len, int fb_num);
 
 #endif
-#endif
+
 #endif //_MSM_MDP_H_

@@ -56,6 +56,9 @@ on boot
     chmod 0665 /dev/graphics/fb0
     chmod 0665 /dev/graphics/fb1
 
+    chmod 0666 /dev/kgsl-2d0
+    chmod 0666 /dev/kgsl-3d0
+
     chmod 0666 /sys/class/leds/button-backlight/brightness
 
     chmod 0666 /sys/class/leds/red/brightness
