@@ -41,17 +41,13 @@ ro.telephony.num.auto.hyphen=true
 ro.telephony.gsm.spn.shortname=true
 ro.cdma.home.operator.numeric=311490
 
-ro.telephony.num.auto.hyphen=true
-ro.telephony.gsm.spn.shortname=true
-ro.telephony.gsm.wait.switch=true
-ro.telephony.rat.network.select=false
-ro.telephony.ecclist=110,119
-ro.telephony.cdma.ecclist=110,119
-ro.telephony.gsm.sms.auto-reg=false
-ro.telephony.add.mccmnctable=false
-ro.telephony.spn.support.mvno=false
-ro.telephony.fdn.data=false
-ro.contacts.number.match.length=7
+# Default network type.
+# 4 => CDMA/EVDO auto mode preferred.
+ro.telephony.default_network=4
+
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=90
+mobiledata.interfaces=rmnet0,rmnet_sdio0,rmnet1,rmnet_sdio1,data,gprs
 
 service.config.gsensor_cal=1
 libcamera.orientation=0
@@ -66,6 +62,5 @@ ro.use_data_netmgrd=true
 ro.config.ehrpd=true
 keyguard.no_require_sim=true
 
-wifi.supplicant_scan_interval=90
 ro.telephony.call_ring.delay=1000
 wifi.wapi=0
