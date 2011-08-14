@@ -174,8 +174,8 @@ on property:ro.hdmi.enable=true
     start hdmid
 
 service akmd /system/bin/akmd8975
-	user compass
-	group system
+    user compass
+    group system
 
 service geomagneticd /system/bin/geomagneticd
     user compass
