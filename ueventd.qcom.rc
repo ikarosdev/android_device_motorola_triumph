@@ -20,7 +20,6 @@
 /dev/sdioctl5             0640   radio      radio
 /dev/sdioctl6             0640   radio      radio
 /dev/sdioctl7             0640   radio      radio
-/dev/qemu_trace           0666   system     system
 /dev/qmi                  0640   radio      radio
 /dev/qmi0                 0640   radio      radio
 /dev/qmi1                 0640   radio      radio
