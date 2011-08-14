@@ -71,7 +71,7 @@ on boot
     chmod 0666 /sys/class/leds/green/brightness
 
 	chown compass system /dev/yas529
-	chmod 0666 /dev/yas529
+    chmod 0666 /dev/yas529
     chown compass system /dev/bma150
     chmod 0666 /dev/ltr502als_alsps
 
