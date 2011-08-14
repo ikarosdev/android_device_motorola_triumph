@@ -200,13 +200,6 @@ service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dwext 
     disabled
     oneshot
 
-service wapi_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant_wapi -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
-    user root
-    group wifi inet
-    socket wpa_wlan0 dgram 660 wifi wifi
-    disabled
-    oneshot
-
 service dhcpcd_wlan0 /system/bin/dhcpcd -BKL
     disabled
     oneshot
