@@ -9,8 +9,16 @@ on fs
     mount ext3 /dev/block/mmcblk0p11 /cache wait nosuid nodev data=ordered
 
 on boot
-	# This is needed for RIL
+	# qmuxd socket
     mkdir /data/radio 0770 radio radio
+    chown radio radio 0770 /data/radio
+
+    # Permissions for ril
+    chown radio system /dev/oncrpc/00000000:0
+    chown radio system /dev/oncrpc/3000fe00:a82d4624
+    chown radio system /dev/oncrpc/30000015:731f0000
+    chown radio system /dev/oncrpc/3000005d:9202a8e4
+    chown radio system /dev/oncrpc/3000001d:00010000
 
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
@@ -29,7 +37,6 @@ on boot
     chmod 0666 /sys/module/akm8975/parameters/als_enabled
     chmod 0666 /sys/module/akm8975/parameters/ps_enabled
 
-    chmod 0777 /system/bin/CIR_Test
     chmod 0666 /dev/ttyHS1
     chmod 0666 /dev/ir_mcu
 
@@ -42,7 +49,6 @@ on boot
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
     chown system system /sys/devices/platform/msm_hsusb/gadget/wakeup
-
 
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
@@ -150,11 +156,6 @@ service wiperiface /system/bin/wiperiface
     group qcom_oncrpc
     oneshot
 
-service gpsone_daemon /system/bin/gpsone_daemon
-    user root
-    group qcom_oncrpc
-    disabled
-
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     user system
     group system qcom_oncrpc
@@ -165,23 +166,12 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
-on property:ro.service.ckpd.enable=1
-    start ckpd
-
 service hdmid /system/bin/hdmid
     socket hdmid stream 0660 root system graphics
     disabled
 
 on property:ro.hdmi.enable=true
     start hdmid
-
-service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
-    group radio
-    disabled
-    oneshot
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
 
 service akmd /system/bin/akmd8975
 	user compass
