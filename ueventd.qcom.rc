@@ -3,14 +3,28 @@
 /dev/rfkill             0640    root        root
 
 #radio
-/dev/oncrpc/*           0660    radio       system
-/dev/smdcntl0           0640    radio       radio
-/dev/smdcntl1           0640    radio       radio
-/dev/smdcntl2           0640    radio       radio
-/dev/smd0               0640    radio       radio
-/dev/qmi0               0640    radio       radio
-/dev/qmi1               0640    radio       radio
-/dev/qmi2               0640    radio       radio
+/dev/smd7                 0640   radio      radio
+/dev/smdcntl0             0640   radio      radio
+/dev/smdcntl1             0640   radio      radio
+/dev/smdcntl2             0640   radio      radio
+/dev/smdcntl3             0640   radio      radio
+/dev/smdcntl4             0640   radio      radio
+/dev/smdcntl5             0640   radio      radio
+/dev/smdcntl6             0640   radio      radio
+/dev/smdcntl7             0640   radio      radio
+/dev/sdioctl0             0640   radio      radio
+/dev/sdioctl1             0640   radio      radio
+/dev/sdioctl2             0640   radio      radio
+/dev/sdioctl3             0640   radio      radio
+/dev/sdioctl4             0640   radio      radio
+/dev/sdioctl5             0640   radio      radio
+/dev/sdioctl6             0640   radio      radio
+/dev/sdioctl7             0640   radio      radio
+/dev/qemu_trace           0666   system     system
+/dev/qmi                  0640   radio      radio
+/dev/qmi0                 0640   radio      radio
+/dev/qmi1                 0640   radio      radio
+/dev/qmi2                 0640   radio      radio
 
 #camera
 /dev/msm_camera/*       0660    system      system
@@ -22,7 +36,25 @@
 /dev/bma150				0640    compass     system
 /dev/ltr502als_alsps    0640    compass     system
 
+#video
+/dev/msm_vidc_reg         0660  system       audio
+/dev/msm_vidc_dec         0660  system       audio
+/dev/msm_vidc_enc         0660  system       audio
+
 #audio
+/dev/msm_amrnb            0660  system       audio
+/dev/msm_amrwb            0660  system       audio
+/dev/msm_aac              0660  system       audio
+/dev/msm_qcelp            0660  system       audio
+/dev/msm_evrc             0660  system       audio
+/dev/msm_fm               0660  system       audio
+/dev/msm_acdb             0660  system       audio
+/dev/msm_wma              0660  system       audio
+/dev/msm_wmapro           0660  system       audio
+/dev/msm_qcelp_in         0660  system       audio
+/dev/msm_evrc_in          0660  system       audio
+/dev/msm_preproc_ctl      0660  system       audio
+/dev/msm_a2dp_in          0640  system       audio
 /dev/msm_audio_dev_ctrl 0660    system      audio
 /dev/msm_acdb           0660    system      audio
 /dev/msm_pcm_lp_dec     0660    system      audio
@@ -33,9 +65,6 @@
 /dev/msm_pcm_out*       0660    system      audio
 /dev/msm_pcm_in*        0660    system      audio
 /dev/msm_mp3*           0660    system      audio
-/dev/msm_vidc_reg       0660    system      audio
-/dev/msm_vidc_dec       0660    system      audio
-/dev/msm_vidc_enc       0660    system      audio
 /dev/gemini0	        0660    system      system
 
 #graphics
