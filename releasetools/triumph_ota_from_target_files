@@ -349,6 +349,14 @@ def WriteFullOTAPackage(input_zip, output_zip):
 
   common.CheckSize(boot_img.data, "boot.img", OPTIONS.info_dict)
   common.ZipWriteStr(output_zip, "boot.img", boot_img.data)
+
+	# Crappily set permissions on extra files
+	script.SetPermissions("/system/etc/init.qcom.coex.sh", 0, 2000, 0555)
+	script.SetPermissions("/system/etc/init.qcom.wifi.sh", 0, 2000, 0555)
+	script.SetPermissions("/system/etc/init.qcom.bt.sh", 0, 2000, 0555)
+	script.SetPermissions("/system/etc/init.qcom.fm.sh", 0, 2000, 0555)
+	script.SetPermissions("/system/etc/init.qcom.sdio.sh", 0, 2000, 0555)
+
   script.ShowProgress(0.2, 0)
 
   if OPTIONS.backuptool:
