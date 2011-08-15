@@ -17,9 +17,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USES_2G_VM_SPLIT := true
 TARGET_USES_OLD_LIBSENSORS_HAL := true
 
-# Use stock libril
-TARGET_PROVIDES_LIBRIL := vendor/motorola/triumph/proprietary/lib/libril.so
-
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releasetools/triumph_img_from_target_files
@@ -36,7 +33,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
-BOARD_PREBUILT_LIBAUDIO := true
+TARGET_PROVIDES_LIBAUDIO := true
 
 # Graphics
 BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
@@ -59,6 +56,10 @@ BOARD_CAMERA_USE_GETBUFFERINFO := true
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := triumph
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+
+# FM Radio
+BOARD_HAVE_FM_RADIO := true
+BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
 # USB
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
