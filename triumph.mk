@@ -121,7 +121,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/hdmid:/system/bin/hdmid \
     vendor/motorola/triumph/proprietary/bin/ds_fmc_appd:/system/bin/ds_fmc_appd
 
-# MM binaries
+# MM
 PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/mm-abl-test:/system/bin/mm-abl-test \
     vendor/motorola/triumph/proprietary/bin/mm-adec-omxaac-test:/system/bin/mm-adec-omxaac-test \
@@ -152,7 +152,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test:/system/bin/mm-venc-omx-test \
     vendor/motorola/triumph/proprietary/bin/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \
     vendor/motorola/triumph/proprietary/bin/mm-video-driver-test:/system/bin/mm-video-driver-test \
-    vendor/motorola/triumph/proprietary/bin/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test
+    vendor/motorola/triumph/proprietary/bin/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test \
+    vendor/motorola/triumph/proprietary/lib/libgemini.so:/system/lib/libgemini.so
 
 # egl
 PRODUCT_COPY_FILES += \
@@ -263,7 +264,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libdss.so:/system/lib/libdss.so \
     vendor/motorola/triumph/proprietary/lib/libauth.so:/system/lib/libauth.so \
     vendor/motorola/triumph/proprietary/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
-    vendor/motorola/triumph/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \
     vendor/motorola/triumph/proprietary/lib/libqmiservices.so:/system/lib/libqmiservices.so \
     vendor/motorola/triumph/proprietary/lib/libqdp.so:/system/lib/libqdp.so \
     vendor/motorola/triumph/proprietary/lib/libidl.so:/system/lib/libidl.so \
@@ -271,10 +271,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/liboem_rapi.so:/system/lib/liboem_rapi.so \
     vendor/motorola/triumph/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
     vendor/motorola/triumph/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \
-    vendor/motorola/triumph/proprietary/lib/liboncrpc.so:/system/lib/liboncrpc.so \
     vendor/motorola/triumph/proprietary/lib/libpdapi.so:/system/lib/libpdapi.so \
-    vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so \
-    vendor/motorola/triumph/proprietary/lib/libgemini.so:/system/lib/libgemini.so
+    vendor/motorola/triumph/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so
 
 # xml config
 PRODUCT_COPY_FILES += \
