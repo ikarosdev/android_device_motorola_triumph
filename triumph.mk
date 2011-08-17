@@ -189,7 +189,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/triumph/proprietary/lib/libaudio.so:/system/lib/libaudio.so \
     vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/obj/lib/libaudioalsa.so \
     vendor/motorola/triumph/proprietary/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \
-    vendor/motorola/triumph/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so
+    vendor/motorola/triumph/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so \
+    vendor/motorola/triumph/proprietary/lib/liba2dp.so:/system/lib/liba2dp.so
 
 # Sensors
 PRODUCT_COPY_FILES += \
