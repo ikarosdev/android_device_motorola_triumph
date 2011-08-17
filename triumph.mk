@@ -242,8 +242,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/proprietary/lib/libril.so:obj/lib/libril.so \
-    vendor/motorola/triumph/proprietary/lib/libril.so:/system/lib/libril.so \
     vendor/motorola/triumph/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \
     vendor/motorola/triumph/proprietary/lib/libreference-ril.so:/system/lib/libreference-ril.so \
     vendor/motorola/triumph/proprietary/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so \
