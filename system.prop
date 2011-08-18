@@ -41,13 +41,8 @@ ro.telephony.num.auto.hyphen=true
 ro.telephony.gsm.spn.shortname=true
 ro.cdma.home.operator.numeric=311490
 
-# Default network type.
-# 4 => CDMA/EVDO auto mode preferred.
-ro.telephony.default_network=4
-
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=90
-mobiledata.interfaces=rmnet0,rmnet_sdio0,rmnet1,rmnet_sdio1,data,gprs
 
 service.config.gsensor_cal=1
 libcamera.orientation=0
