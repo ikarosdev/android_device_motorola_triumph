@@ -288,7 +288,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=32m \
     persist.sys.use_dithering=1 \
-	ro.sf.lcd_density=240 \
+    ro.sf.lcd_density=240 \
     ro.compcache.default=0
 
 # Properties taken from build.prop
