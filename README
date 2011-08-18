@@ -1,1 +1,18 @@
-This is a WIP. Currently builds, flashes and boots, but everything is broken.
+This is a WIP. Currently builds, flashes and boots. However, not everything is functional.
+
+Here's what is currently working:
+
+- Wifi
+- Touchscreen w/ multitouch
+- 3D Graphics/EGL
+- Bluetooth
+- Orientation/screen rotate
+- LED/keyboard lights
+- USB mounting
+
+What doesn't work:
+
+- RIL/3G
+- Camera
+- Sound
+- Mms
