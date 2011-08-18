@@ -23,7 +23,7 @@ bin/netmgrd
 bin/wpdiagd
 bin/port-bridge
 bin/btwlancoex
-bin/ds_fmc_appd
+bin/rild
 
 bin/thermald
 bin/geomagneticd
@@ -148,5 +148,3 @@ lib/libloc_ext.so
 for FILE in $FILES; do
 	adb pull system/$FILE ../../../vendor/motorola/triumph/proprietary/$FILE
 done
-
-chmod 755 ../../../vendor/motorola/triumph/proprietary/bin/*
