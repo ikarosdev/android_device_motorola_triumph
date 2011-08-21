@@ -17,6 +17,12 @@
 <!-- Passion-specific phone app resources. -->
 <resources>
 
+    <!-- Flag indicating whether the Phone app should ignore
+         EVENT_SIM_NETWORK_LOCKED events from the Sim.  If true, this will
+         prevent the IccNetworkDepersonalizationPanel from being shown,
+         and effectively disable the "Sim network lock" feature. -->
+    <bool name="ignore_sim_network_locked_events">true</bool>
+
     <!-- Enable the onscreen touch UI for all states of the in-call UI. -->
     <bool name="allow_incoming_call_touch_ui">true</bool>
     <bool name="allow_in_call_touch_ui">true</bool>
@@ -37,8 +43,5 @@
 
     <!-- This device implements a noise suppression device for in call audio-->
     <bool name="has_in_call_noise_suppression">true</bool>
-
-    <!-- Flag indicating if the phone is a world phone -->
-    <bool name="world_phone">true</bool>
 
 </resources>
