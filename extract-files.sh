@@ -191,7 +191,8 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/port-bridge:/system/bin/port-bridge \\
     vendor/__VENDOR__/__DEVICE__/proprietary/wpdiagd:/system/bin/wpdiagd \\
     vendor/__VENDOR__/__DEVICE__/proprietary/btwlancoex:/system/bin/btwlancoex \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/hdmid:/system/bin/hdmid
+    vendor/__VENDOR__/__DEVICE__/proprietary/hdmid:/system/bin/hdmid \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/cnd:/system/bin/cnd
 
 # MM
 PRODUCT_COPY_FILES += \\
@@ -229,10 +230,10 @@ PRODUCT_COPY_FILES += \\
 
 # egl
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so
 
 # Camera
@@ -254,7 +255,7 @@ PRODUCT_COPY_FILES += \\
 
 # Sensors
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
 
 # GPS
 PRODUCT_COPY_FILES += \\

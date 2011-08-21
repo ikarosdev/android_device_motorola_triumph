@@ -141,6 +141,9 @@ service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
 
 service qmuxd /system/bin/qmuxd
 
+service cnd /system/bin/cnd
+	socket cnd stream 660 root radio
+
 service wpdiagd /system/bin/wpdiagd
     oneshot
     socket wpdiagd stream 666
