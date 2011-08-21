@@ -170,157 +170,157 @@ adb pull /system/lib/libloc_ext.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # HW init
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/qmuxd:/system/bin/qmuxd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/hci_qcomm_init:/system/bin/hci_qcomm_init
+    vendor/__VENDOR__/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/hci_qcomm_init:/system/bin/hci_qcomm_init
 
 # Sensors binaries
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/geomagneticd:/system/bin/geomagneticd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/orientationd:/system/bin/orientationd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/proximityd:/system/bin/proximityd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/lightd:/system/bin/lightd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/thermald:/system/bin/thermald
+    vendor/__VENDOR__/__DEVICE__/proprietary/geomagneticd:/system/bin/geomagneticd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/orientationd:/system/bin/orientationd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/proximityd:/system/bin/proximityd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lightd:/system/bin/lightd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/thermald:/system/bin/thermald
 
 # other binaries
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/hostapd:/system/bin/hostapd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/hciattach:/system/bin/hciattach \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/netmgrd:/system/bin/netmgrd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/rmt_storage:/system/bin/rmt_storage \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/bluetoothd:/system/bin/bluetoothd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/port-bridge:/system/bin/port-bridge \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/wpdiagd:/system/bin/wpdiagd \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/btwlancoex:/system/bin/btwlancoex \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/hdmid:/system/bin/hdmid
+    vendor/__VENDOR__/__DEVICE__/proprietary/hostapd:/system/bin/hostapd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/hciattach:/system/bin/hciattach \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bluetoothd:/system/bin/bluetoothd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/port-bridge:/system/bin/port-bridge \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/wpdiagd:/system/bin/wpdiagd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/btwlancoex:/system/bin/btwlancoex \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/hdmid:/system/bin/hdmid
 
 # MM
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-abl-test:/system/bin/mm-abl-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxaac-test:/system/bin/mm-adec-omxaac-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxadpcm-test:/system/bin/mm-adec-omxadpcm-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxamr-test:/system/bin/mm-adec-omxamr-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxamrwb-test:/system/bin/mm-adec-omxamrwb-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxevrc-test:/system/bin/mm-adec-omxevrc-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxmp3-test:/system/bin/mm-adec-omxmp3-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxQcelp13-test:/system/bin/mm-adec-omxQcelp13-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adec-omxwma-test:/system/bin/mm-adec-omxwma-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-adspsvc-test:/system/bin/mm-adspsvc-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-aenc-omxaac-test:/system/bin/mm-aenc-omxaac-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-aenc-omxamr-test:/system/bin/mm-aenc-omxamr-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-aenc-omxevrc-test:/system/bin/mm-aenc-omxevrc-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-aenc-omxqcelp13-test:/system/bin/mm-aenc-omxqcelp13-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-alsa-test:/system/bin/mm-audio-alsa-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-ctrl-test:/system/bin/mm-audio-ctrl-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-mvs-test-int:/system/bin/mm-audio-mvs-test-int \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-mvs-test-ext:/system/bin/mm-audio-mvs-test-ext \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-native-test:/system/bin/mm-audio-native-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-audio-voem_if-test:/system/bin/mm-audio-voem_if-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-jpeg-dec-test:/system/bin/mm-jpeg-dec-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-jpeg-enc-test:/system/bin/mm-jpeg-enc-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-omx-devmgr:/system/bin/mm-omx-devmgr \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-qcamera-test:/system/bin/mm-qcamera-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-qcamera-testsuite-client:/system/bin/mm-qcamera-testsuite-client \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-vdec-omx-test:/system/bin/mm-vdec-omx-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-venc-omx-test:/system/bin/mm-venc-omx-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-video-driver-test:/system/bin/mm-video-driver-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgemini.so:/system/lib/libgemini.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-abl-test:/system/bin/mm-abl-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxaac-test:/system/bin/mm-adec-omxaac-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxadpcm-test:/system/bin/mm-adec-omxadpcm-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxamr-test:/system/bin/mm-adec-omxamr-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxamrwb-test:/system/bin/mm-adec-omxamrwb-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxevrc-test:/system/bin/mm-adec-omxevrc-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxmp3-test:/system/bin/mm-adec-omxmp3-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxQcelp13-test:/system/bin/mm-adec-omxQcelp13-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adec-omxwma-test:/system/bin/mm-adec-omxwma-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-adspsvc-test:/system/bin/mm-adspsvc-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-aenc-omxaac-test:/system/bin/mm-aenc-omxaac-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-aenc-omxamr-test:/system/bin/mm-aenc-omxamr-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-aenc-omxevrc-test:/system/bin/mm-aenc-omxevrc-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-aenc-omxqcelp13-test:/system/bin/mm-aenc-omxqcelp13-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-alsa-test:/system/bin/mm-audio-alsa-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-ctrl-test:/system/bin/mm-audio-ctrl-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-mvs-test-int:/system/bin/mm-audio-mvs-test-int \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-mvs-test-ext:/system/bin/mm-audio-mvs-test-ext \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-native-test:/system/bin/mm-audio-native-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-audio-voem_if-test:/system/bin/mm-audio-voem_if-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-jpeg-dec-test:/system/bin/mm-jpeg-dec-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-jpeg-enc-test:/system/bin/mm-jpeg-enc-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-omx-devmgr:/system/bin/mm-omx-devmgr \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-qcamera-test:/system/bin/mm-qcamera-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-qcamera-testsuite-client:/system/bin/mm-qcamera-testsuite-client \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-vdec-omx-test:/system/bin/mm-vdec-omx-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-venc-omx-test:/system/bin/mm-venc-omx-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-venc-omx-test720p:/system/bin/mm-venc-omx-test720p \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-video-driver-test:/system/bin/mm-video-driver-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/mm-video-encdrv-test:/system/bin/mm-video-encdrv-test \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so
 
 # egl
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgsl.so:/system/lib/libgsl.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so
 
 # Camera
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcamera.so:obj/lib/libcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcamera.so:/system/lib/libcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liboemcamera.so:/system/lib/liboemcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmmipl.so:/system/lib/libmmipl.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so
 
 # Audio
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudio.so:/obj/lib/libaudio.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudio.so:/system/lib/libaudio.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudioalsa.so:/system/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudioeq.so:/system/lib/libaudioeq.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liba2dp.so:/system/lib/liba2dp.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/obj/lib/libaudio.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/system/lib/libaudio.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/liba2dp.so:/system/lib/liba2dp.so
 
 # Sensors
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/hw/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libloc_api.so:/system/lib/libloc_api.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libloc-rpc.so:/system/lib/libloc-rpc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libloc_ext.so:/system/lib/libloc_ext.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/libloc_api.so:/system/lib/libloc_api.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libloc-rpc.so:/system/lib/libloc-rpc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libloc_ext.so:/system/lib/libloc_ext.so
 
 # OMX
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxEvrcEnc.so:/system/lib/libOmxEvrcEnc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAacDec.so:/system/lib/libOmxAacDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxQcelp13Dec.so:/system/lib/libOmxQcelp13Dec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAmrEnc.so:/system/lib/libOmxAmrEnc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAdpcmDec.so:/system/lib/libOmxAdpcmDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxEvrcDec.so:/system/lib/libOmxEvrcDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAmrDec.so:/system/lib/libOmxAmrDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAmrwbDec.so:/system/lib/libOmxAmrwbDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxWmaDec.so:/system/lib/libOmxWmaDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxQcelp13Enc.so:/system/lib/libOmxQcelp13Enc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxMp3Dec.so:/system/lib/libOmxMp3Dec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAmrRtpDec.so:/system/lib/libOmxAmrRtpDec.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxAacEnc.so:/system/lib/libOmxAacEnc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmm-adspsvc.so:/system/lib/libmm-adspsvc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_aacdec_sharedlibrary.so:/system/lib/libomx_aacdec_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_amrdec_sharedlibrary.so:/system/lib/libomx_amrdec_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_amrenc_sharedlibrary.so:/system/lib/libomx_amrenc_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_avcdec_sharedlibrary.so:/system/lib/libomx_avcdec_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_m4vdec_sharedlibrary.so:/system/lib/libomx_m4vdec_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_mp3dec_sharedlibrary.so:/system/lib/libomx_mp3dec_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libomx_sharedlibrary.so:/system/lib/libomx_sharedlibrary.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libOmxCore.so:/system/lib/libOmxCore.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxEvrcEnc.so:/system/lib/libOmxEvrcEnc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAacDec.so:/system/lib/libOmxAacDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxQcelp13Dec.so:/system/lib/libOmxQcelp13Dec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAmrEnc.so:/system/lib/libOmxAmrEnc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAdpcmDec.so:/system/lib/libOmxAdpcmDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxEvrcDec.so:/system/lib/libOmxEvrcDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAmrDec.so:/system/lib/libOmxAmrDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAmrwbDec.so:/system/lib/libOmxAmrwbDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxWmaDec.so:/system/lib/libOmxWmaDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxQcelp13Enc.so:/system/lib/libOmxQcelp13Enc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxMp3Dec.so:/system/lib/libOmxMp3Dec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAmrRtpDec.so:/system/lib/libOmxAmrRtpDec.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxAacEnc.so:/system/lib/libOmxAacEnc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libmm-adspsvc.so:/system/lib/libmm-adspsvc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_aacdec_sharedlibrary.so:/system/lib/libomx_aacdec_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_amrdec_sharedlibrary.so:/system/lib/libomx_amrdec_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_amrenc_sharedlibrary.so:/system/lib/libomx_amrenc_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_avcdec_sharedlibrary.so:/system/lib/libomx_avcdec_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_m4vdec_sharedlibrary.so:/system/lib/libomx_m4vdec_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_mp3dec_sharedlibrary.so:/system/lib/libomx_mp3dec_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libomx_sharedlibrary.so:/system/lib/libomx_sharedlibrary.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so
 
 # RIL
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/rild:/system/bin/rild \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril.so:/system/lib/libril.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril-qc-1.so:/system/lib/libril-qc-1.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libreference-ril.so:/system/lib/libreference-ril.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdiag.so:/system/lib/libdiag.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liboncrpc.so:/system/lib/liboncrpc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqmi.so:/system/lib/libqmi.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsm.so:/system/lib/libdsm.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqueue.so:/system/lib/libqueue.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdll.so:/system/lib/libdll.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcm.so:/system/lib/libcm.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmmgsdilib.so:/system/lib/libmmgsdilib.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgsdi_exp.so:/system/lib/libgsdi_exp.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgstk_exp.so:/system/lib/libgstk_exp.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwms.so:/system/lib/libwms.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnv.so:/system/lib/libnv.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwmsts.so:/system/lib/libwmsts.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libpbmlib.so:/system/lib/libpbmlib.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdss.so:/system/lib/libdss.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libauth.so:/system/lib/libauth.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqmiservices.so:/system/lib/libqmiservices.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqdp.so:/system/lib/libqdp.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libidl.so:/system/lib/libidl.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsutils.so:/system/lib/libdsutils.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liboem_rapi.so:/system/lib/liboem_rapi.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnetmgr.so:/system/lib/libnetmgr.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libpdapi.so:/system/lib/libpdapi.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libpdsm_atl.so:/system/lib/libpdsm_atl.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libuim.so:/system/lib/libuim.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/rild:/system/bin/rild \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libril.so:/system/lib/libril.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libril-qc-1.so:/system/lib/libril-qc-1.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libreference-ril.so:/system/lib/libreference-ril.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdiag.so:/system/lib/libdiag.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/liboncrpc.so:/system/lib/liboncrpc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libqmi.so:/system/lib/libqmi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdsm.so:/system/lib/libdsm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libqueue.so:/system/lib/libqueue.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdll.so:/system/lib/libdll.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libcm.so:/system/lib/libcm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libmmgsdilib.so:/system/lib/libmmgsdilib.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libgsdi_exp.so:/system/lib/libgsdi_exp.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libgstk_exp.so:/system/lib/libgstk_exp.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libwms.so:/system/lib/libwms.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libnv.so:/system/lib/libnv.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libwmsts.so:/system/lib/libwmsts.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libpbmlib.so:/system/lib/libpbmlib.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdss.so:/system/lib/libdss.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libauth.so:/system/lib/libauth.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libqmiservices.so:/system/lib/libqmiservices.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libqdp.so:/system/lib/libqdp.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libidl.so:/system/lib/libidl.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdsutils.so:/system/lib/libdsutils.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/liboem_rapi.so:/system/lib/liboem_rapi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libnetmgr.so:/system/lib/libnetmgr.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libpdapi.so:/system/lib/libpdapi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libpdsm_atl.so:/system/lib/libpdsm_atl.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libuim.so:/system/lib/libuim.so
 EOF
 
 ./setup-makefiles.sh
