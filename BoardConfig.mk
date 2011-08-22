@@ -1,5 +1,3 @@
-USE_CAMERA_STUB := true
-
 # inherit from the proprietary version
 -include vendor/motorola/triumph/BoardConfigVendor.mk
 
@@ -51,6 +49,7 @@ WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
 WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
 
 # Camera
+BOARD_USE_FROYO_LIBCAMERA := true
 BOARD_CAMERA_USE_GETBUFFERINFO := true
 
 # GPS Defines
