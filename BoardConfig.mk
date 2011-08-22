@@ -49,7 +49,7 @@ WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
 WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
 
 # Camera
-BOARD_USE_FROYO_LIBCAMERA := true
+#BOARD_USE_FROYO_LIBCAMERA := true
 BOARD_CAMERA_USE_GETBUFFERINFO := true
 
 # GPS Defines

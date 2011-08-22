@@ -37,6 +37,7 @@ adb pull /system/bin/proximityd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/lightd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hdmid  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/bluetoothd  ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/bin/cnd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/bin/mm-abl-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/mm-adec-omxaac-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
