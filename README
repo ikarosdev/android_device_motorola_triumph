@@ -1,18 +1,22 @@
-This is a WIP. Currently builds, flashes and boots. However, not everything is functional.
+This is a WIP. Currently builds, flashes and boots. Most, but not all, things are functional.
 
 Here's what is currently working:
 
+- RIL/3G (credits to tickerguy)
+- Rear-facing camera
 - Wifi
+- Sound (credits to tickerguy)
 - Touchscreen w/ multitouch
 - 3D Graphics/EGL
 - Bluetooth
 - Orientation/screen rotate
 - LED/keyboard lights
 - USB mounting
+- Proximity sensor
 
 What doesn't work:
 
-- RIL/3G
-- Camera
-- Sound
+- GPS (doesn't lock on position)
+- Light sensor
+- Front-facing camera
 - Mms
