@@ -14,11 +14,145 @@ on boot
     chown radio radio 0770 /data/radio
 
     # Permissions for ril
+    chown radio system /dev/radio0
     chown radio system /dev/oncrpc/00000000:0
-    chown radio system /dev/oncrpc/3000fe00:a82d4624
+    chown radio system /dev/oncrpc/30000000:001d0000
+    chown radio system /dev/oncrpc/30000003:00030000
+    chown radio system /dev/oncrpc/3000000e:00090000
+    chown radio system /dev/oncrpc/3000000f:00030000
+    chown radio system /dev/oncrpc/30000012:00040000
+    chown radio system /dev/oncrpc/30000014:00030000
+    chown radio system /dev/oncrpc/30000015:00010000
     chown radio system /dev/oncrpc/30000015:731f0000
-    chown radio system /dev/oncrpc/3000005d:9202a8e4
+    chown radio system /dev/oncrpc/30000016:00040000
+    chown radio system /dev/oncrpc/30000017:00010000
+    chown radio system /dev/oncrpc/30000019:00090000
+    chown radio system /dev/oncrpc/3000001a:00020000
+    chown radio system /dev/oncrpc/3000001b:00040000
     chown radio system /dev/oncrpc/3000001d:00010000
+    chown radio system /dev/oncrpc/30000020:00010000
+    chown radio system /dev/oncrpc/30000024:00010000
+    chown radio system /dev/oncrpc/3000003c:00090000
+    chown radio system /dev/oncrpc/30000048:00040000
+    chown radio system /dev/oncrpc/3000005b:000b0000
+    chown radio system /dev/oncrpc/3000005d:00000000
+    chown radio system /dev/oncrpc/3000005d:00010000
+    chown radio system /dev/oncrpc/3000005d:9202a8e4
+    chown radio system /dev/oncrpc/3000005f:00020000
+    chown radio system /dev/oncrpc/30000060:00050000
+    chown radio system /dev/oncrpc/30000061:00030000
+    chown radio system /dev/oncrpc/30000064:00010000
+    chown radio system /dev/oncrpc/3000006b:00010000
+    chown radio system /dev/oncrpc/30000081:00010000
+    chown radio system /dev/oncrpc/30000082:00010000
+    chown radio system /dev/oncrpc/30000089:00050000
+    chown radio system /dev/oncrpc/3000008c:00050000
+    chown radio system /dev/oncrpc/30000091:00030000
+    chown radio system /dev/oncrpc/3000009f:00010000
+    chown radio system /dev/oncrpc/300000a1:00040000
+    chown radio system /dev/oncrpc/300000a3:00020000
+    chown radio system /dev/oncrpc/300000a4:00010000
+    chown radio system /dev/oncrpc/300000a7:00010000
+    chown radio system /dev/oncrpc/300000ab:00010000
+    chown radio system /dev/oncrpc/3000fe00:a82d4624
+    chown radio system /dev/oncrpc/3000fffd:00000000
+
+    # Permissions for the camera and audio systems
+    #
+    chown system system /dev/video20
+    chown system audio /dev/pmem_adsp
+    chown system system /dev/msm_camera/frame0
+    chown system system /dev/msm_camera/frame1
+    chown system system /dev/msm_camera/control0
+    chown system system /dev/msm_camera/control1
+    chown system system /dev/msm_camera/config0
+    chown system system /dev/msm_camera/config1
+    chown system audio /dev/msm_a2dp_in
+    chown system audio /dev/msm_aac
+    chown system audio /dev/msm_aac_in
+    chown system audio /dev/msm_acdb
+    chown system audio /dev/msm_adc
+    chown system audio /dev/msm_adpcm
+    chown system audio /dev/msm_amrnb
+    chown system audio /dev/msm_amrnb_in
+    chown system audio /dev/msm_amrwb
+    chown system audio /dev/msm_audio_dev_ctrl
+    chown system audio /dev/msm_evrc
+    chown system audio /dev/msm_evrc_in
+    chown system audio /dev/msm_fm
+    chown system audio /dev/msm_mp3
+    chown system audio /dev/msm_mp3_lp
+    chown system audio /dev/msm_mvs
+    chown system audio /dev/msm_pcm_dec
+    chown system audio /dev/msm_pcm_in
+    chown system audio /dev/msm_pcm_lp_dec
+    chown system audio /dev/msm_pcm_out
+    chown system audio /dev/msm_qcelp
+    chown system audio /dev/msm_qcelp_in
+    chown system audio /dev/msm_rotator
+    chown system audio /dev/msm_vidc_dec
+    chown system audio /dev/msm_vidc_enc
+    chown system audio /dev/msm_vidc_reg
+    chown system audio /dev/msm_wma
+    chown system audio /dev/msm_wmapro
+    chown system audio /dev/msmsdcc
+    chmod 0660 /dev/video20
+    chmod 0660 /dev/pmem_adsp
+    chmod 0660 /dev/msm_camera/frame0
+    chmod 0660 /dev/msm_camera/frame1
+    chmod 0660 /dev/msm_camera/control0
+    chmod 0660 /dev/msm_camera/control1
+    chmod 0660 /dev/msm_camera/config0
+    chmod 0660 /dev/msm_camera/config1
+    chmod 0660 /dev/msm_a2dp_in
+    chmod 0660 /dev/msm_aac
+    chmod 0660 /dev/msm_aac_in
+    chmod 0660 /dev/msm_acdb
+    chmod 0660 /dev/msm_adc
+    chmod 0660 /dev/msm_adpcm
+    chmod 0660 /dev/msm_amrnb
+    chmod 0660 /dev/msm_amrnb_in
+    chmod 0660 /dev/msm_amrwb
+    chmod 0660 /dev/msm_audio_dev_ctrl
+    chmod 0660 /dev/msm_evrc
+    chmod 0660 /dev/msm_evrc_in
+    chmod 0660 /dev/msm_fm
+    chmod 0660 /dev/msm_mp3
+    chmod 0660 /dev/msm_mp3_lp
+    chmod 0660 /dev/msm_mvs
+    chmod 0660 /dev/msm_pcm_dec
+    chmod 0660 /dev/msm_pcm_in
+    chmod 0660 /dev/msm_pcm_lp_dec
+    chmod 0660 /dev/msm_pcm_out
+    chmod 0660 /dev/msm_qcelp
+    chmod 0660 /dev/msm_qcelp_in
+    chmod 0660 /dev/msm_rotator
+    chmod 0660 /dev/msm_vidc_dec
+    chmod 0660 /dev/msm_vidc_enc
+    chmod 0660 /dev/msm_vidc_reg
+    chmod 0660 /dev/msm_wma
+    chmod 0660 /dev/msm_wmapro
+    chmod 0660 /dev/msmsdcc
+
+    # Permissions for the i2c bus (compass, etc) and gps
+    chmod 660 /dev/i2c-0
+    chmod 660 /dev/i2c-1
+    chmod 660 /dev/i2c-2
+    chmod 660 /dev/i2c-3
+    chmod 660 /dev/i2c-4
+    chmod 660 /dev/i2c-5
+    chmod 660 /dev/i2c-6
+    chmod 660 /dev/i2c-7
+    chown compass system /dev/i2c-0
+    chown compass system /dev/i2c-1
+    chown compass system /dev/i2c-2
+    chown compass system /dev/i2c-3
+    chown compass system /dev/i2c-4
+    chown compass system /dev/i2c-5
+    chown compass system /dev/i2c-6
+    chown compass system /dev/i2c-7
+    chmod 660 /dev/gps_sync
+    chown system system /dev/gps_sync
 
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
