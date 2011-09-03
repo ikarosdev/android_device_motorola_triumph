@@ -1,6 +1,9 @@
 #
 # system.prop for triumph
 #
+ro.telephony.ril_nid=97
+ro.telephony.ril_prl=1115
+ro.telephony.ril_class=Triumph
 ro.ril.def.preferred.network=4
 ro.telephony.default_network=4
 rild.libpath=/system/lib/libril-qc-1.so
@@ -14,7 +17,7 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-DEVICE_PROVISIONED=1
+# DEVICE_PROVISIONED=1
 debug.sf.hw=1
 ro.dev.dmm=1
 
