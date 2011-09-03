@@ -62,5 +62,6 @@ ro.use_data_netmgrd=true
 ro.config.ehrpd=true
 keyguard.no_require_sim=true
 
+ro.cdma.voicemail.number=mine
 ro.telephony.call_ring.delay=1000
 wifi.wapi=0
