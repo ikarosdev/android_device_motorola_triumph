@@ -13,10 +13,11 @@ Here's what is currently working:
 - LED/keyboard lights
 - USB mounting
 - Proximity sensor
+- Ambient light sensor (credits to tickerguy)
+- Wired headset (credits to tickerguy)
 
 What doesn't work:
 
 - GPS (doesn't lock on position)
-- Light sensor
 - Front-facing camera
 - Mms
