@@ -21,8 +21,8 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Term \
     gps.triumph \
+    lights.triumph \
     gralloc.msm7x30 \
-    lights.msm7x30 \
     overlay.default \
     libOmxCore \
     libOmxVenc \
