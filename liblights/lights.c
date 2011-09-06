@@ -48,6 +48,9 @@ char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 
 char const*const LCD_BACKLIGHT_FILE = "/sys/class/leds/lcd-backlight/brightness";
 
+char const*const RED_FREQ_FILE = "/sys/class/leds/red/device/grpfreq";
+char const*const RED_PWM_FILE = "/sys/class/leds/red/device/grppwm";
+
 char const*const RED_BLINK_FILE = "/sys/class/leds/red/device/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/device/blink";
 char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
