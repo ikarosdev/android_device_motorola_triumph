@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
+    device/motorola/triumph/prebuilt/etc/loc_parameter.ini:system/etc/loc_parameter.ini
 
 # xml config
 PRODUCT_COPY_FILES += \
