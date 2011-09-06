@@ -104,7 +104,7 @@ static int set_light_backlight(struct light_device_t* dev,
     int brightness = rgb_to_brightness(state);
     pthread_mutex_lock(&g_lock);
     g_backlight = brightness;
-    err = write_int(LCD_FILE, brightness);
+    err = write_int(LCD_BACKLIGHT_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
     return err;
 }
