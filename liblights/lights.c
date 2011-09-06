@@ -61,10 +61,6 @@ char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
 void init_globals(void) {
     // init the mutex
     pthread_mutex_init(&g_lock, NULL);
-
-    /* figure out if we have the amber LED or not.
-       If yes, just support green and amber.         */
-    g_haveAmberLed = (access(AMBER_LED_FILE, W_OK) == 0) ? 1 : 0;
 }
 
 static int write_int(char const* path, int value) {
@@ -151,23 +147,9 @@ static int set_speaker_light_locked(struct light_device_t* dev,
     green = (colorRGB >> 8) & 0xFF;
     blue = colorRGB & 0xFF;
 
-    if (!g_haveAmberLed) {
-        write_int(RED_LED_FILE, red);
-        write_int(GREEN_LED_FILE, green);
-        write_int(BLUE_LED_FILE, blue);
-    } else {
-        /* all of related red led is replaced by amber */
-        if (red) {
-            write_int(AMBER_LED_FILE, 1);
-            write_int(GREEN_LED_FILE, 0);
-        } else if (green) {
-            write_int(AMBER_LED_FILE, 0);
-            write_int(GREEN_LED_FILE, 1);
-        } else {
-            write_int(GREEN_LED_FILE, 0);
-            write_int(AMBER_LED_FILE, 0);
-        }
-    }
+    write_int(RED_LED_FILE, red);
+    write_int(GREEN_LED_FILE, green);
+    write_int(BLUE_LED_FILE, blue);
 
     if (onMS > 0 && offMS > 0) {
         int totalMS = onMS + offMS;
@@ -191,15 +173,11 @@ static int set_speaker_light_locked(struct light_device_t* dev,
         pwm = 0;
     }
 
-    if (!g_haveAmberLed) {
-        if (blink) {
-            write_int(RED_FREQ_FILE, freq);
-            write_int(RED_PWM_FILE, pwm);
-        }
-        write_int(RED_BLINK_FILE, blink);
-    } else {
-        write_int(AMBER_BLINK_FILE, blink);
+    if (blink) {
+       write_int(RED_FREQ_FILE, freq);
+       write_int(RED_PWM_FILE, pwm);
     }
+    write_int(RED_BLINK_FILE, blink);
 
     return 0;
 }
