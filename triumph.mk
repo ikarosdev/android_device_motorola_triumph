@@ -114,6 +114,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
     device/motorola/triumph/prebuilt/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
+# GPS
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
+
 # xml config
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
