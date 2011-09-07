@@ -129,7 +129,7 @@ static int set_speaker_light_locked(struct light_device_t* dev,
 
     switch (state->flashMode) {
         case LIGHT_FLASH_TIMED:
-        switch(colorRGB) {
+            switch(colorRGB) {
 		case RGB_RED:
 		    write_int(RED_BLINK_FILE, 1);
 		    break;
@@ -157,17 +157,17 @@ static int set_speaker_light_locked(struct light_device_t* dev,
 		    write_int(BLUE_LED_FILE, 0);
 		    break;
 		case RGB_GREEN:
-		    write_int(RED_LED_FILE, 1);
-		    write_int(GREEN_LED_FILE, 0);
+		    write_int(RED_LED_FILE, 0);
+		    write_int(GREEN_LED_FILE, 1);
 		    write_int(BLUE_LED_FILE, 0);
 		    break;
 		case RGB_BLUE:
-		    write_int(RED_LED_FILE, 1);
+		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_LED_FILE, 0);
-		    write_int(BLUE_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 1);
 		    break;
 		case RGB_BLACK: /* LED off */
-		    write_int(RED_LED_FILE, 1);
+		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_LED_FILE, 0);
 		    write_int(BLUE_LED_FILE, 0);
 		    break;
