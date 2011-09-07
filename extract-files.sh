@@ -146,12 +146,6 @@ adb pull /system/lib/libpdsm_atl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libuim.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/lib/libgemini.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libcommondefs.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libgps.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc_api.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc-rpc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc_ext.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk
@@ -257,16 +251,6 @@ PRODUCT_COPY_FILES += \\
 # Sensors
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
-
-# GPS
-PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libloc.so:/obj/lib/libloc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libloc.so:/system/lib/libloc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libgps.so:/system/lib/libgps.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libcommondefs.so:/system/lib/libcommondefs.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libloc_api.so:/system/lib/libloc_api.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libloc-rpc.so:/system/lib/libloc-rpc.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libloc_ext.so:/system/lib/libloc_ext.so
 
 # OMX
 PRODUCT_COPY_FILES += \\
