@@ -44,24 +44,28 @@ static int g_buttons = 0;
 char const*const RED_LED_FILE = "/sys/class/leds/red/brightness";
 char const*const GREEN_LED_FILE = "/sys/class/leds/green/brightness";
 char const*const BLUE_LED_FILE = "/sys/class/leds/blue/brightness";
-char const*const AMBER_LED_FILE = "/sys/class/leds/amber/brightness";
 
 char const*const LCD_BACKLIGHT_FILE = "/sys/class/leds/lcd-backlight/brightness";
 
-char const*const RED_FREQ_FILE = "/sys/class/leds/red/device/grpfreq";
-char const*const RED_PWM_FILE = "/sys/class/leds/red/device/grppwm";
-
 char const*const RED_BLINK_FILE = "/sys/class/leds/red/device/blink";
 char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/device/blink";
-char const*const AMBER_BLINK_FILE = "/sys/class/leds/amber/blink";
 
 char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
+
+/* Look ma! Pretty colors... ooooh */
+enum {
+    RGB_RED = 0xFF0000,
+    RGB_GREEN = 0x00FF00,
+    RGB_BLUE = 0x0000FF,
+    RGB_BLACK = 0x000000, // We'll see if this works
+};
 
 /**
  * device methods
  */
 
-void init_globals(void) {
+void init_globals(void)
+{
     // init the mutex
     pthread_mutex_init(&g_lock, NULL);
 }
@@ -89,7 +93,6 @@ static int write_int(char const* path, int value) {
 static int is_lit(struct light_state_t const* state) {
     return state->color & 0x00ffffff;
 }
-
 
 static int rgb_to_brightness(struct light_state_t const* state) {
     int color = state->color & 0x00ffffff;
@@ -121,72 +124,85 @@ static int set_light_buttons(struct light_device_t* dev,
 
 static int set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state) {
-    int len;
-    int alpha, red, green, blue;
-    int blink, freq, pwm;
-    int onMS, offMS;
-    unsigned int colorRGB;
+
+    unsigned int colorRGB = state->color & 0xFFFFFF;
 
     switch (state->flashMode) {
         case LIGHT_FLASH_TIMED:
-            onMS = state->flashOnMS;
-            offMS = state->flashOffMS;
-            break;
+        switch(colorRGB) {
+		case RGB_RED:
+		    write_int(RED_BLINK_FILE, 1);
+		    break;
+		case RGB_GREEN:
+		    write_int(GREEN_BLINK_FILE, 1);
+		    break;
+		case RGB_BLUE:
+		    write_int(BLUE_LED_FILE, 1); /* Triumph doesn't have blue, right? */
+		    break;
+		case RGB_BLACK: /* LED off */
+		    write_int(RED_BLINK_FILE, 0);
+		    write_int(GREEN_BLINK_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
+		    break;
+		default:
+		    LOGE("set_led_state colorRGB=%08X, unknown color\n", colorRGB);
+		    break;
+	    }
+	    break;
         case LIGHT_FLASH_NONE:
-        default:
-            onMS = 0;
-            offMS = 0;
-            break;
+	    switch(colorRGB) {
+		case RGB_RED:
+		    write_int(RED_LED_FILE, 1);
+		    write_int(GREEN_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
+		    break;
+		case RGB_GREEN:
+		    write_int(RED_LED_FILE, 1);
+		    write_int(GREEN_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
+		    break;
+		case RGB_BLUE:
+		    write_int(RED_LED_FILE, 1);
+		    write_int(GREEN_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
+		    break;
+		case RGB_BLACK: /* LED off */
+		    write_int(RED_LED_FILE, 1);
+		    write_int(GREEN_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
+		    break;
+		default:
+		    LOGE("set_led_state colorRGB=%08X, unknown color\n", colorRGB);
+		    break;
+	    }
+	    break;
+	default:
+	    LOGE("set_led_state colorRGB=%08X, unknown mode %d\n", colorRGB, state->flashMode);
     }
-
-    colorRGB = state->color;
-
-#if 0
-    LOGD("set_speaker_light_locked colorRGB=%08X, onMS=%d, offMS=%d\n",
-            colorRGB, onMS, offMS);
-#endif
-
-    red = (colorRGB >> 16) & 0xFF;
-    green = (colorRGB >> 8) & 0xFF;
-    blue = colorRGB & 0xFF;
-
-    write_int(RED_LED_FILE, red);
-    write_int(GREEN_LED_FILE, green);
-    write_int(BLUE_LED_FILE, blue);
-
-    if (onMS > 0 && offMS > 0) {
-        int totalMS = onMS + offMS;
-
-        // the LED appears to blink about once per second if freq is 20
-        // 1000ms / 20 = 50
-        freq = totalMS / 50;
-        // pwm specifies the ratio of ON versus OFF
-        // pwm = 0 -> always off
-        // pwm = 255 => always on
-        pwm = (onMS * 255) / totalMS;
-
-        // the low 4 bits are ignored, so round up if necessary
-        if (pwm > 0 && pwm < 16)
-            pwm = 16;
-
-        blink = 1;
-    } else {
-        blink = 0;
-        freq = 0;
-        pwm = 0;
-    }
-
-    if (blink) {
-       write_int(RED_FREQ_FILE, freq);
-       write_int(RED_PWM_FILE, pwm);
-    }
-    write_int(RED_BLINK_FILE, blink);
-
     return 0;
 }
 
+/* Allow notifications while battery is charging */
+static void set_speaker_light_dual_locked(struct light_device_t *dev, struct light_state_t *bstate, 
+    struct light_state_t *nstate) {
+
+    unsigned int bcolorRGB = bstate->color & 0xFFFFFF;
+
+    if(bcolorRGB == RGB_RED) {
+	write_int(RED_LED_FILE, 1);
+	write_int(GREEN_BLINK_FILE, 1);
+    } else if(bcolorRGB == RGB_GREEN) {
+	write_int(GREEN_LED_FILE, 1);
+	write_int(RED_BLINK_FILE, 1);
+    } else {
+	LOGE("set_led_state (dual) unknown color: bcolorRGB=%08X\n", bcolorRGB);
+    }
+}
+
 static void handle_speaker_battery_locked(struct light_device_t* dev) {
-    if (is_lit(&g_battery)) {
+    if (is_lit(&g_battery) && is_lit(&g_notification)) {
+        set_speaker_light_dual_locked(dev, &g_battery, &g_notification);
+    } else if (is_lit(&g_battery)) {
         set_speaker_light_locked(dev, &g_battery);
     } else {
         set_speaker_light_locked(dev, &g_notification);
@@ -211,7 +227,7 @@ static int set_light_notifications(struct light_device_t* dev,
     return 0;
 }
 
-/* What the hell is LIGHT_FLASH_HARDWARE? */
+/* What the hell is this? */
 static int set_light_attention(struct light_device_t* dev,
         struct light_state_t const* state) {
     return 0;
@@ -235,8 +251,8 @@ static int close_lights(struct light_device_t *dev) {
 
 /** Open a new instance of a lights device using name */
 static int open_lights(const struct hw_module_t* module, char const* name,
-        struct hw_device_t** device)
-{
+        struct hw_device_t** device) {
+
     int (*set_light)(struct light_device_t* dev,
             struct light_state_t const* state);
 
@@ -287,7 +303,7 @@ const struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "QCT MSM7K lights Module",
-    .author = "Google, Inc.",
+    .name = "Triumph lights Module",
+    .author = "ikarosdev",
     .methods = &lights_module_methods,
 };
