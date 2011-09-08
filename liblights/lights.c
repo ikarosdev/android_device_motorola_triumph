@@ -141,21 +141,25 @@ static int set_speaker_light_locked(struct light_device_t* dev,
 		    write_int(RED_BLINK_FILE, 1);
 		    write_int(GREEN_LED_FILE, 0);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_GREEN:
 		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_BLINK_FILE, 1);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_BLUE:
 		    write_int(RED_LED_FILE, 1); /* Triumph doesn't have blue, so I'll set yellow. */
 		    write_int(GREEN_LED_FILE, 1);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_BLACK: /* LED off */
 		    write_int(RED_BLINK_FILE, 0);
 		    write_int(GREEN_BLINK_FILE, 0);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		default:
 		    LOGE("set_led_state colorRGB=%08X, unknown color\n", colorRGB);
@@ -168,21 +172,25 @@ static int set_speaker_light_locked(struct light_device_t* dev,
 		    write_int(RED_LED_FILE, 1);
 		    write_int(GREEN_LED_FILE, 0);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_GREEN:
 		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_LED_FILE, 1);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_BLUE:
 		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_LED_FILE, 0);
 		    write_int(BLUE_LED_FILE, 1);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		case RGB_BLACK: /* LED off */
 		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_LED_FILE, 0);
 		    write_int(BLUE_LED_FILE, 0);
+		    LOGD("set_led_state colorRGB=%08X\n", colorRGB);
 		    break;
 		default:
 		    LOGE("set_led_state colorRGB=%08X, unknown color\n", colorRGB);
@@ -205,10 +213,12 @@ static void set_speaker_light_dual_locked(struct light_device_t *dev, struct lig
 	write_int(RED_LED_FILE, 1);
 	write_int(GREEN_BLINK_FILE, 1);
 	write_int(BLUE_LED_FILE, 0);
+	LOGD("set_led_state (dual) bcolorRGB=%08X\n", colorRGB);
     } else if(bcolorRGB == RGB_GREEN) {
 	write_int(RED_BLINK_FILE, 1);
 	write_int(GREEN_LED_FILE, 1);
 	write_int(BLUE_LED_FILE, 0);
+	LOGD("set_led_state (dual) bcolorRGB=%08X\n", colorRGB);
     } else {
 	LOGE("set_led_state (dual) unknown color: bcolorRGB=%08X\n", bcolorRGB);
     }
