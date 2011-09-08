@@ -47,17 +47,24 @@ char const*const BLUE_LED_FILE = "/sys/class/leds/blue/brightness";
 
 char const*const LCD_BACKLIGHT_FILE = "/sys/class/leds/lcd-backlight/brightness";
 
-char const*const RED_BLINK_FILE = "/sys/class/leds/red/device/blink";
-char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/device/blink";
+char const*const RED_BLINK_FILE = "/sys/class/leds/red/blink";
+char const*const GREEN_BLINK_FILE = "/sys/class/leds/green/blink";
 
 char const*const BUTTON_FILE = "/sys/class/leds/button-backlight/brightness";
 
 /* Look ma! Pretty colors... ooooh */
 enum {
+    RGB_BLACK = 0x000000,
     RGB_RED = 0xFF0000,
+    RGB_AMBER = 0xFFFF00,  /* note this is actually RGB yellow */
     RGB_GREEN = 0x00FF00,
     RGB_BLUE = 0x0000FF,
-    RGB_BLACK = 0x000000, // We'll see if this works
+    RGB_WHITE = 0xFFFFFF,
+    RGB_PINK = 0xFFC0CB,
+    RGB_ORANGE = 0xFFA500,
+    RGB_YELLOW = 0xFFFF00,
+    RGB_PURPLE = 0x800080,
+    RGB_LT_BLUE = 0xADD8E6,
 };
 
 /**
@@ -132,12 +139,18 @@ static int set_speaker_light_locked(struct light_device_t* dev,
             switch(colorRGB) {
 		case RGB_RED:
 		    write_int(RED_BLINK_FILE, 1);
+		    write_int(GREEN_LED_FILE, 0);
+		    write_int(BLUE_LED_FILE, 0);
 		    break;
 		case RGB_GREEN:
+		    write_int(RED_LED_FILE, 0);
 		    write_int(GREEN_BLINK_FILE, 1);
+		    write_int(BLUE_LED_FILE, 0);
 		    break;
 		case RGB_BLUE:
-		    write_int(BLUE_LED_FILE, 1); /* Triumph doesn't have blue, right? */
+		    write_int(RED_LED_FILE, 1); /* Triumph doesn't have blue, so I'll set yellow. */
+		    write_int(GREEN_LED_FILE, 1);
+		    write_int(BLUE_LED_FILE, 0);
 		    break;
 		case RGB_BLACK: /* LED off */
 		    write_int(RED_BLINK_FILE, 0);
@@ -191,9 +204,11 @@ static void set_speaker_light_dual_locked(struct light_device_t *dev, struct lig
     if(bcolorRGB == RGB_RED) {
 	write_int(RED_LED_FILE, 1);
 	write_int(GREEN_BLINK_FILE, 1);
+	write_int(BLUE_LED_FILE, 0);
     } else if(bcolorRGB == RGB_GREEN) {
-	write_int(GREEN_LED_FILE, 1);
 	write_int(RED_BLINK_FILE, 1);
+	write_int(GREEN_LED_FILE, 1);
+	write_int(BLUE_LED_FILE, 0);
     } else {
 	LOGE("set_led_state (dual) unknown color: bcolorRGB=%08X\n", bcolorRGB);
     }
