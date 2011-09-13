@@ -15,9 +15,9 @@ Here's what is currently working:
 - Proximity sensor
 - Ambient light sensor (credits to tickerguy)
 - Wired headset (credits to tickerguy)
+- MMS (credits to tickerguy)
 
 What doesn't work:
 
 - GPS (doesn't lock on position)
 - Front-facing camera
-- Mms
