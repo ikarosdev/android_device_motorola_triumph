@@ -82,7 +82,13 @@ shift $(($OPTIND-1))
 # Note that "hci_qcomm_init -e" prints expressions to set the shell variables
 # BTS_DEVICE, BTS_TYPE, BTS_BAUD, and BTS_ADDRESS.
 
+BA=`ls /data/misc/bluetoothd|head -n 1`
+if [ "$BA" = "" ]
+then
 eval $(/system/bin/hci_qcomm_init -g 1 -e && echo "exit_code_hci_qcomm_init=0" || echo "exit_code_hci_qcomm_init=1")
+else 
+eval $(/system/bin/hci_qcomm_init -b $BA -g 1 -e && echo "exit_code_hci_qcomm_init=0" || echo "exit_code_hci_qcomm_init=1")
+fi
 
 case $exit_code_hci_qcomm_init in
   0) logi "Bluetooth QSoC firmware download succeeded, $BTS_DEVICE $BTS_TYPE $BTS_BAUD $BTS_ADDRESS";;

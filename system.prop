@@ -38,13 +38,13 @@ persist.cne.rat.acq.retry.tout=0
 ro.cdma.home.operator.alpha=Virgin Mobile
 gsm.operator.alpha=Virgin Mobile
 gsm.operator.iso-country=us
-gsm.operator.numeric=311490
+gsm.operator.numeric=310053
 ro.telephony.gsm.ecclist=110,112,119,911
 ro.telephony.cdma.ecclist=110,112,119,911
 ro.telephony.ecclist=08,000,110,112,118,119,911,999
 ro.telephony.num.auto.hyphen=true
 ro.telephony.gsm.spn.shortname=true
-ro.cdma.home.operator.numeric=311490
+ro.cdma.home.operator.numeric=310053
 
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=90
@@ -66,5 +66,4 @@ ro.cdma.voicemail.number=mine
 ro.telephony.call_ring.delay=1000
 wifi.wapi=0
 
-# KD
-ro.lights.kd_auto=true
+#ro.lights.kd_auto=true
