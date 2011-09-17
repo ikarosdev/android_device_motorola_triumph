@@ -118,6 +118,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini
 
+# Yuck
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/libcamera_client.so:system/lib/libcamera_client.so
+
 # xml config
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/media_profiles.xml:system/etc/media_profiles.xml
