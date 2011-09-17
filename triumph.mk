@@ -120,7 +120,8 @@ PRODUCT_COPY_FILES += \
 
 # Yuck
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/libcamera_client.so:system/lib/libcamera_client.so
+    device/motorola/triumph/prebuilt/libcamera_client.so:system/lib/libcamera_client.so \
+    device/motorola/triumph/prebuilt/libcameraservice.so:system/lib/libcameraservice.so
 
 # xml config
 PRODUCT_COPY_FILES += \
