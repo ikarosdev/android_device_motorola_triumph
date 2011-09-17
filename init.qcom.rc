@@ -94,6 +94,13 @@ on boot
     #Provide the access to hostapd.conf only to root and group
     chmod 0660 /data/hostapd/hostapd.conf
 
+    #Power Management 
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000 
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1024000 
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand 
+    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 50000 
+
+
             chown compass system /dev/yas529
     chmod 0666 /dev/yas529
     chown compass system /dev/bma150
