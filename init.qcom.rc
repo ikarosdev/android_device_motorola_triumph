@@ -13,169 +13,26 @@ on boot
     mkdir /data/radio 0770 radio radio
     chown radio radio 0770 /data/radio
 
-    # Permissions for ril
-    chown radio system /dev/radio0
-    chown radio system /dev/oncrpc/00000000:0
-    chown radio system /dev/oncrpc/30000000:001d0000
-    chown radio system /dev/oncrpc/30000003:00030000
-    chown radio system /dev/oncrpc/3000000e:00090000
-    chown radio system /dev/oncrpc/3000000f:00030000
-    chown radio system /dev/oncrpc/30000012:00040000
-    chown radio system /dev/oncrpc/30000014:00030000
-    chown radio system /dev/oncrpc/30000015:00010000
-    chown radio system /dev/oncrpc/30000015:731f0000
-    chown radio system /dev/oncrpc/30000016:00040000
-    chown radio system /dev/oncrpc/30000017:00010000
-    chown radio system /dev/oncrpc/30000019:00090000
-    chown radio system /dev/oncrpc/3000001a:00020000
-    chown radio system /dev/oncrpc/3000001b:00040000
-    chown radio system /dev/oncrpc/3000001d:00010000
-    chown radio system /dev/oncrpc/30000020:00010000
-    chown radio system /dev/oncrpc/30000024:00010000
-    chown radio system /dev/oncrpc/3000003c:00090000
-    chown radio system /dev/oncrpc/30000048:00040000
-    chown radio system /dev/oncrpc/3000005b:000b0000
-    chown radio system /dev/oncrpc/3000005d:00000000
-    chown radio system /dev/oncrpc/3000005d:00010000
-    chown radio system /dev/oncrpc/3000005d:9202a8e4
-    chown radio system /dev/oncrpc/3000005f:00020000
-    chown radio system /dev/oncrpc/30000060:00050000
-    chown radio system /dev/oncrpc/30000061:00030000
-    chown radio system /dev/oncrpc/30000064:00010000
-    chown radio system /dev/oncrpc/3000006b:00010000
-    chown radio system /dev/oncrpc/30000081:00010000
-    chown radio system /dev/oncrpc/30000082:00010000
-    chown radio system /dev/oncrpc/30000089:00050000
-    chown radio system /dev/oncrpc/3000008c:00050000
-    chown radio system /dev/oncrpc/30000091:00030000
-    chown radio system /dev/oncrpc/3000009f:00010000
-    chown radio system /dev/oncrpc/300000a1:00040000
-    chown radio system /dev/oncrpc/300000a3:00020000
-    chown radio system /dev/oncrpc/300000a4:00010000
-    chown radio system /dev/oncrpc/300000a7:00010000
-    chown radio system /dev/oncrpc/300000ab:00010000
-    chown radio system /dev/oncrpc/3000fe00:a82d4624
-    chown radio system /dev/oncrpc/3000fffd:00000000
+    #Create directories for gpsone_daemon services
+    mkdir /data/gpsone_d 0770 gpsone_d qcom_oncrpc
+    mkdir /etc/gpsone_d 0770 gpsone_d qcom_oncrpc
 
-    # Permissions for the camera and audio systems
-    #
-    chown system system /dev/video20
-    chown system audio /dev/pmem_adsp
-    chown system system /dev/msm_camera/frame0
-    chown system system /dev/msm_camera/frame1
-    chown system system /dev/msm_camera/control0
-    chown system system /dev/msm_camera/control1
-    chown system system /dev/msm_camera/config0
-    chown system system /dev/msm_camera/config1
-    chown system audio /dev/msm_a2dp_in
-    chown system audio /dev/msm_aac
-    chown system audio /dev/msm_aac_in
-    chown system audio /dev/msm_acdb
-    chown system audio /dev/msm_adc
-    chown system audio /dev/msm_adpcm
-    chown system audio /dev/msm_amrnb
-    chown system audio /dev/msm_amrnb_in
-    chown system audio /dev/msm_amrwb
-    chown system audio /dev/msm_audio_dev_ctrl
-    chown system audio /dev/msm_evrc
-    chown system audio /dev/msm_evrc_in
-    chown system audio /dev/msm_fm
-    chown system audio /dev/msm_mp3
-    chown system audio /dev/msm_mp3_lp
-    chown system audio /dev/msm_mvs
-    chown system audio /dev/msm_pcm_dec
-    chown system audio /dev/msm_pcm_in
-    chown system audio /dev/msm_pcm_lp_dec
-    chown system audio /dev/msm_pcm_out
-    chown system audio /dev/msm_qcelp
-    chown system audio /dev/msm_qcelp_in
-    chown system audio /dev/msm_rotator
-    chown system audio /dev/msm_vidc_dec
-    chown system audio /dev/msm_vidc_enc
-    chown system audio /dev/msm_vidc_reg
-    chown system audio /dev/msm_wma
-    chown system audio /dev/msm_wmapro
-    chown system audio /dev/msmsdcc
-    chmod 0660 /dev/video20
-    chmod 0660 /dev/pmem_adsp
-    chmod 0660 /dev/msm_camera/frame0
-    chmod 0660 /dev/msm_camera/frame1
-    chmod 0660 /dev/msm_camera/control0
-    chmod 0660 /dev/msm_camera/control1
-    chmod 0660 /dev/msm_camera/config0
-    chmod 0660 /dev/msm_camera/config1
-    chmod 0660 /dev/msm_a2dp_in
-    chmod 0660 /dev/msm_aac
-    chmod 0660 /dev/msm_aac_in
-    chmod 0660 /dev/msm_acdb
-    chmod 0660 /dev/msm_adc
-    chmod 0660 /dev/msm_adpcm
-    chmod 0660 /dev/msm_amrnb
-    chmod 0660 /dev/msm_amrnb_in
-    chmod 0660 /dev/msm_amrwb
-    chmod 0660 /dev/msm_audio_dev_ctrl
-    chmod 0660 /dev/msm_evrc
-    chmod 0660 /dev/msm_evrc_in
-    chmod 0660 /dev/msm_fm
-    chmod 0660 /dev/msm_mp3
-    chmod 0660 /dev/msm_mp3_lp
-    chmod 0660 /dev/msm_mvs
-    chmod 0660 /dev/msm_pcm_dec
-    chmod 0660 /dev/msm_pcm_in
-    chmod 0660 /dev/msm_pcm_lp_dec
-    chmod 0660 /dev/msm_pcm_out
-    chmod 0660 /dev/msm_qcelp
-    chmod 0660 /dev/msm_qcelp_in
-    chmod 0660 /dev/msm_rotator
-    chmod 0660 /dev/msm_vidc_dec
-    chmod 0660 /dev/msm_vidc_enc
-    chmod 0660 /dev/msm_vidc_reg
-    chmod 0660 /dev/msm_wma
-    chmod 0660 /dev/msm_wmapro
-    chmod 0660 /dev/msmsdcc
+    #Set SUID bit for usbhub
+    chmod 4755 /system/bin/usbhub
+    chmod 755 /system/bin/usbhub_init
 
-    # Permissions for the i2c bus (compass, etc) and gps
-    chmod 660 /dev/i2c-0
-    chmod 660 /dev/i2c-1
-    chmod 660 /dev/i2c-2
-    chmod 660 /dev/i2c-3
-    chmod 660 /dev/i2c-4
-    chmod 660 /dev/i2c-5
-    chmod 660 /dev/i2c-6
-    chmod 660 /dev/i2c-7
-    chown compass system /dev/i2c-0
-    chown compass system /dev/i2c-1
-    chown compass system /dev/i2c-2
-    chown compass system /dev/i2c-3
-    chown compass system /dev/i2c-4
-    chown compass system /dev/i2c-5
-    chown compass system /dev/i2c-6
-    chown compass system /dev/i2c-7
-    chmod 660 /dev/gps_sync
-    chown system system /dev/gps_sync
+    #Set SUID for diag_mdlog
+    chmod 4755 /system/bin/diag_mdlog
 
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
     write /proc/sys/vm/dirty_background_ratio  5
-
-    chown compass system /dev/compass
-    chmod 0777 /dev/compass
-
-    chown compass system /dev/akm8975_dev
-    chown compass system /dev/akm8975_aot
-    chown compass system /dev/bma150
-    chmod 0777 /dev/akm8975_dev
-    chmod 0777 /dev/akm8975_aot
-    chmod 0777 /dev/bma150
 
     chmod 0666 /sys/module/akm8975/parameters/als_enabled
     chmod 0666 /sys/module/akm8975/parameters/ps_enabled
 
     chmod 0666 /dev/ttyHS1
     chmod 0666 /dev/ir_mcu
-
-    chown compass system /dev/ltr502als_alsps
-    chmod 0777 /dev/ltr502als_alsps
 
     chown system system /sys/module/android/parameters/product_id
     chown system system /sys/devices/platform/msm_sdcc.1/polling
@@ -203,11 +60,6 @@ on boot
 
     chmod 0666 /sys/class/leds/red/brightness
     chmod 0666 /sys/class/leds/green/brightness
-
-    chown compass system /dev/yas529
-    chmod 0666 /dev/yas529
-    chown compass system /dev/bma150
-    chmod 0666 /dev/ltr502als_alsps
 
     chmod 4777 /system/bin/mm-audio-mvs-test-int
     chmod 4777 /system/bin/mm-audio-mvs-test-ext
@@ -242,11 +94,81 @@ on boot
     #Provide the access to hostapd.conf only to root and group
     chmod 0660 /data/hostapd/hostapd.conf
 
-    # Power Management
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1024000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 50000
+            chown compass system /dev/yas529
+    chmod 0666 /dev/yas529
+    chown compass system /dev/bma150
+    chmod 0666 /dev/ltr502als_alsps
+
+    chmod 0664 /sys/class/input/input2/enable
+    chmod 0664 /sys/class/input/input2/data
+    chmod 0664 /sys/class/input/input2/name
+    chown system input /sys/class/input/input2/enable
+        chown system input /sys/class/input/input2/delay
+        chown system input /sys/class/input/input2/wake
+   
+    chmod 0664 /sys/class/input/input3/enable
+    chmod 0664 /sys/class/input/input3/data
+    chmod 0664 /sys/class/input/input3/name
+    chown system input /sys/class/input/input3/enable
+        chown system input /sys/class/input/input3/delay
+        chown system input /sys/class/input/input3/wake
+
+        chmod 0664 /sys/class/input/input4/enable
+    chmod 0664 /sys/class/input/input4/data
+    chmod 0664 /sys/class/input/input4/name
+        chown system input /sys/class/input/input4/enable
+        chown system input /sys/class/input/input4/delay
+        chown system input /sys/class/input/input4/wake
+        chmod 0664 /sys/class/input/input5/enable
+    chmod 0664 /sys/class/input/input5/data
+    chmod 0664 /sys/class/input/input5/name
+        chown system input /sys/class/input/input5/enable
+        chown system input /sys/class/input/input5/delay
+        chown system input /sys/class/input/input5/wake
+
+        chmod 0664 /sys/class/input/input6/enable
+    chmod 0664 /sys/class/input/input6/data
+    chmod 0664 /sys/class/input/input6/name
+        chown system input /sys/class/input/input6/enable
+        chown system input /sys/class/input/input6/delay
+        chown system input /sys/class/input/input6/wake
+
+    chmod 0664 /sys/class/input/input7/enable
+    chmod 0664 /sys/class/input/input7/data
+    chmod 0664 /sys/class/input/input7/name
+        chown system input /sys/class/input/input7/enable
+        chown system input /sys/class/input/input7/delay
+        chown system input /sys/class/input/input7/wake
+
+    chmod 0664 /sys/class/input/input8/enable
+    chmod 0664 /sys/class/input/input8/data
+    chmod 0664 /sys/class/input/input8/name
+        chown system input /sys/class/input/input8/enable
+        chown system input /sys/class/input/input8/delay
+        chown system input /sys/class/input/input8/wake
+
+    chmod 0664 /sys/class/input/input9/enable
+    chmod 0664 /sys/class/input/input9/data
+    chmod 0664 /sys/class/input/input9/name
+        chown system input /sys/class/input/input9/enable
+        chown system input /sys/class/input/input9/delay
+        chown system input /sys/class/input/input9/wake
+
+    chmod 0664 /sys/class/input/input10/enable
+    chmod 0664 /sys/class/input/input10/data
+    chmod 0664 /sys/class/input/input10/name
+        chown system input /sys/class/input/input10/enable
+        chown system input /sys/class/input/input10/delay
+        chown system input /sys/class/input/input10/wake
+
+        chmod 0664 /sys/class/input/input11/enable
+    chmod 0664 /sys/class/input/input11/data
+    chmod 0664 /sys/class/input/input11/name
+        chown system input /sys/class/input/input11/enable
+        chown system input /sys/class/input/input11/delay
+        chown system input /sys/class/input/input11/wake
+
+
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -270,6 +192,11 @@ service apn-populate /system/bin/sh /system/etc/init.apn.sh
     group radio
     oneshot
 
+service gpsone_daemon /system/bin/gpsone_daemon
+    user root
+    group qcom_oncrpc
+    disabled
+
 service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
     user shell
     group bluetooth net_bt_admin
@@ -286,6 +213,13 @@ on property:ro.emmc=1
 service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
 
 service qmuxd /system/bin/qmuxd
+    user radio
+    group radio
+
+service fm_server /system/bin/fm_server
+    user system
+    group system
+    oneshot
 
 service cnd /system/bin/cnd
 	socket cnd stream 660 root radio
@@ -322,9 +256,9 @@ service hdmid /system/bin/hdmid
 on property:ro.hdmi.enable=true
     start hdmid
 
-service akmd /system/bin/akmd8975
-    user compass
-    group system
+#service akmd /system/bin/akmd8975
+#    user compass
+#    group system
 
 service geomagneticd /system/bin/geomagneticd
     user compass

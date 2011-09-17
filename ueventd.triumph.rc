@@ -2,7 +2,7 @@
 /dev/cpu_dma_latency    0660    system      system
 /dev/rfkill             0640    root        root
 
-#radio
+# radio
 /dev/smd7                 0640   radio      radio
 /dev/smdcntl0             0640   radio      radio
 /dev/smdcntl1             0640   radio      radio
@@ -25,15 +25,62 @@
 /dev/qmi1                 0640   radio      radio
 /dev/qmi2                 0640   radio      radio
 
+# Radio
+/dev/radio0		  0644	system	system
+
+# Permissions for ril
+/dev/radio		  	0660	radio	system
+/dev/oncrpc/00000000:0		0660	radio	system
+/dev/oncrpc/30000000:001d0000	0660	radio	system
+/dev/oncrpc/30000003:00030000	0660	radio	system
+/dev/oncrpc/3000000e:00090000	0660	radio	system
+/dev/oncrpc/3000000f:00030000	0660	radio	system
+/dev/oncrpc/30000012:00040000	0660	radio	system
+/dev/oncrpc/30000014:00030000	0660	radio	system
+/dev/oncrpc/30000015:00010000	0660	radio	system
+/dev/oncrpc/30000015:731f0000	0660	radio	system
+/dev/oncrpc/30000016:00040000	0660	radio	system
+/dev/oncrpc/30000017:00010000	0660	radio	system
+/dev/oncrpc/30000019:00090000	0660	radio	system
+/dev/oncrpc/3000001a:00020000	0660	radio	system
+/dev/oncrpc/3000001b:00040000	0660	radio	system
+/dev/oncrpc/3000001d:00010000	0660	radio	system
+/dev/oncrpc/30000020:00010000	0660	radio	system
+/dev/oncrpc/30000024:00010000	0660	radio	system
+/dev/oncrpc/3000003c:00090000	0660	radio	system
+/dev/oncrpc/30000048:00040000	0660	radio	system
+/dev/oncrpc/3000005b:000b0000	0660	radio	system
+/dev/oncrpc/3000005d:00000000	0660	radio	system
+/dev/oncrpc/3000005d:00010000	0660	radio	system
+/dev/oncrpc/3000005d:9202a8e4	0660	radio	system
+/dev/oncrpc/3000005f:00020000	0660	radio	system
+/dev/oncrpc/30000060:00050000	0660	radio	system
+/dev/oncrpc/30000061:00030000	0660	radio	system
+/dev/oncrpc/30000064:00010000	0660	radio	system
+/dev/oncrpc/3000006b:00010000	0660	radio	system
+/dev/oncrpc/30000081:00010000	0660	radio	system
+/dev/oncrpc/30000082:00010000	0660	radio	system
+/dev/oncrpc/30000089:00050000	0660	radio	system
+/dev/oncrpc/3000008c:00050000	0660	radio	system
+/dev/oncrpc/30000091:00030000	0660	radio	system
+/dev/oncrpc/3000009f:00010000	0660	radio	system
+/dev/oncrpc/300000a1:00040000	0660	radio	system
+/dev/oncrpc/300000a3:00020000	0660	radio	system
+/dev/oncrpc/300000a4:00010000	0660	radio	system
+/dev/oncrpc/300000a7:00010000	0660	radio	system
+/dev/oncrpc/300000ab:00010000	0660	radio	system
+/dev/oncrpc/3000fe00:a82d4624	0660	radio	system
+/dev/oncrpc/3000fffd:00000000	0660	radio	system
+
 #camera
 /dev/msm_camera/*       0660    system      system
 
 #sensors
-/dev/akm8975_daemon     0640    compass     system
-/dev/akm8975_aot        0640    compass     system
-/dev/yas529		0640    compass     system
-/dev/bma150		0640    compass     system
-/dev/ltr502als_alsps    0640    compass     system
+/dev/yas529		0777    root	    system
+/dev/ltr502als_alsps    0777    compass     system
+/dev/bi041p		0777	root	    root
+/dev/i2c-2		0777    root	    system
+/dev/gps_sync		0777	root        root
 
 #video
 /dev/msm_vidc_reg         0660  system       audio
