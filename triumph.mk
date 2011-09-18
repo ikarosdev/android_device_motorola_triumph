@@ -118,6 +118,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini
 
+# APN
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/apns-conf.xml:system/etc/apns-conf.xml
+
 # Yuck
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/libcamera_client.so:system/lib/libcamera_client.so \
