@@ -120,7 +120,7 @@ PRODUCT_COPY_FILES += \
 
 # APN
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/apns-conf.xml:system/etc/apns-conf.xml
+    device/motorola/triumph/files/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Yuck
 PRODUCT_COPY_FILES += \
