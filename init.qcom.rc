@@ -4,9 +4,9 @@ on fs
     mkdir /cache 0771 system system
     mkdir /devlog 0700 root root
 
-    mount ext3 /dev/block/mmcblk0p7 /system wait ro data=ordered
-    mount ext3 /dev/block/mmcblk0p8 /data wait nosuid nodev data=ordered
-    mount ext3 /dev/block/mmcblk0p11 /cache wait nosuid nodev data=ordered
+    mount ext4 /dev/block/mmcblk0p7 /system wait ro barrier=1
+    mount ext4 /dev/block/mmcblk0p8 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p11 /cache wait noatime nosuid nodev barrier=1
 
 on boot
     # qmuxd socket
