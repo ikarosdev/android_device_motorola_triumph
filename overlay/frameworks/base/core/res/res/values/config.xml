@@ -24,7 +24,7 @@
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Our amoled doesn't animate well. -->
+    <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
     <!-- disable menu hard key on Passion in non-pattern lockscreen -->
@@ -40,8 +40,8 @@
     <!-- Default color for notification LED is white -->
     <color name="config_defaultNotificationColor">#ffffffff</color>
 
-    <!-- Default blink frequency for notification LED is 9 seconds. -->
-    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <!-- Default blink frequency for notification LED is 5 seconds. -->
+    <integer name="config_defaultNotificationLedOff">5000</integer>
 
     <!-- Component name of the service providing network location support. -->
     <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
@@ -88,14 +88,6 @@
         <item>"rmnet\\d"</item>
         <item>"tiwlan\\d"</item>
     </string-array>
-
-   <!-- Flag indicating whether we should enable the automatic brightness in Settings.
-         config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
-    <bool name="config_automatic_brightness_available">true</bool>
-
-    <!-- disable menu hard key on Passion in non-pattern lockscreen.
-         Note not needed on Hero has it is a hardware key so no issue -->
-    <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
@@ -202,7 +194,7 @@
         <item>31</item>
     </integer-array>
 
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
+    <!-- Vibrator pattern for feedback about booting with safe mode enabled -->
     <integer-array name="config_safeModeEnabledVibePattern">
         <item>0</item>
         <item>1</item>
@@ -225,7 +217,5 @@
         <item>20</item>
         <item>30</item>
     </integer-array>
-
-
 
 </resources>
