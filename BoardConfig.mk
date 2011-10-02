@@ -82,7 +82,7 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_HAS_NO_MISC_PARTITION := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-BOARD_KERNEL_CMDLINE := console=ttyMSM1 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := console=ttyMSM1 androidboot.hardware=triumph
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
 
