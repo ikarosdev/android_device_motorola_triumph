@@ -122,10 +122,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/apns-conf.xml:system/etc/apns-conf.xml
 
-# Yuck
+# Camera
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/libcamera_client.so:system/lib/libcamera_client.so \
-    device/motorola/triumph/prebuilt/libcameraservice.so:system/lib/libcameraservice.so
+    vendor/motorola/triumph/cherry/libcamera.so:/system/lib/libcamera.so \
+    vendor/motorola/triumph/cherry/libcamera.so:/obj/lib/libcamera.so \
+    vendor/motorola/triumph/cherry/liboemcamera.so:/system/lib/liboemcamera.so \
+    vendor/motorola/triumph/cherry/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    vendor/motorola/triumph/cherry/libmmipl.so:/system/lib/libmmipl.so
 
 # xml config
 PRODUCT_COPY_FILES += \

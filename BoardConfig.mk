@@ -1,3 +1,8 @@
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
+USE_CAMERA_STUB := false
+
 # inherit from the proprietary version
 -include vendor/motorola/triumph/BoardConfigVendor.mk
 
@@ -50,6 +55,7 @@ WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
 # Camera
 #BOARD_USE_FROYO_LIBCAMERA := true
 BOARD_CAMERA_USE_GETBUFFERINFO := true
+BOARD_USE_CAF_LIBCAMERA := true
 
 # GPS Defines
 BOARD_USES_QCOM_GPS := true
