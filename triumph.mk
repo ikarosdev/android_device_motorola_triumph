@@ -124,11 +124,11 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    vendor/motorola/triumph/cherry/libcamera.so:/system/lib/libcamera.so \
-    vendor/motorola/triumph/cherry/libcamera.so:/obj/lib/libcamera.so \
-    vendor/motorola/triumph/cherry/liboemcamera.so:/system/lib/liboemcamera.so \
-    vendor/motorola/triumph/cherry/libmmjpeg.so:/system/lib/libmmjpeg.so \
-    vendor/motorola/triumph/cherry/libmmipl.so:/system/lib/libmmipl.so
+    device/motorola/triumph/prebuilt/libcamera.so:/system/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/libcamera.so:/obj/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/liboemcamera.so:/system/lib/liboemcamera.so \
+    device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
 
 # xml config
 PRODUCT_COPY_FILES += \
