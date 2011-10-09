@@ -239,14 +239,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so
 
-# Camera
-PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so
-
 # Audio
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
@@ -256,7 +248,7 @@ PRODUCT_COPY_FILES += \\
 
 # Sensors
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.qcom.so:/system/lib/hw/sensors.qcom.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.qcom.so:/system/lib/hw/sensors.triumph.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
