@@ -118,13 +118,26 @@ static int set_light_backlight(struct light_device_t* dev,
     return err;
 }
 
+/*
+ * KD 2011-10-14 Modify to support PWM control of the button level
+ * Note that this requires a kernel that knows how to handle more than
+ * "on" and "off"; stock kernel does NOT and will likely react badly to
+ * this.  Note that to change the brightness we must cycle off first;
+ * while the kernel may be able to avoid this with more patches, we're
+ * going to honor the structure of the kernel's flag system for now.
+ */
+
 static int set_light_buttons(struct light_device_t* dev,
         struct light_state_t const* state) {
     int err = 0;
-    int on = is_lit(state);
+    int brightness = rgb_to_brightness(state);
+//    int on = is_lit(state);
     pthread_mutex_lock(&g_lock);
-    g_buttons = on;
-    err = write_int(BUTTON_FILE, on?255:0);
+//    g_buttons = on;
+//    err = write_int(BUTTON_FILE, on?255:0);
+    g_buttons = brightness;
+    err = write_int(BUTTON_FILE, 0);
+    err = write_int(BUTTON_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
     return err;
 }
