@@ -147,11 +147,11 @@ adb pull /system/lib/libuim.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/lib/libgemini.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
-adb pull /system/lib/libloc_api.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc-rpc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc_ext.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libgps.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libloc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libloc_api.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libloc-rpc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libloc_ext.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libgps.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libloc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libcommondefs.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk

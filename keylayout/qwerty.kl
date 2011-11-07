@@ -9,16 +9,22 @@ key 8     7
 key 9     8
 key 10    9
 key 11    0
-key 158   BACK              WAKE_DROPPED
+#key 158   BACK              WAKE_DROPPED
+key 158   BACK              VIRTUAL
 key 230   SOFT_RIGHT        WAKE
 key 60    SOFT_RIGHT        WAKE
 key 107   ENDCALL           WAKE_DROPPED
 key 62    ENDCALL           WAKE_DROPPED
-key 229   MENU              WAKE_DROPPED
-key 139   MENU              WAKE_DROPPED
-key 59    MENU              WAKE_DROPPED
-key 127   SEARCH            WAKE_DROPPED
-key 217   SEARCH            WAKE_DROPPED
+#key 229   MENU              WAKE_DROPPED
+#key 139   MENU              WAKE_DROPPED
+#key 59    MENU              WAKE_DROPPED
+key 229   MENU              VIRTUAL
+key 139   MENU              VIRTUAL
+key 59    MENU              VIRTUAL
+# key 127   SEARCH            WAKE_DROPPED
+# key 217   SEARCH            WAKE_DROPPED
+key 127   SEARCH            VIRTUAL
+key 217   SEARCH            VIRTUAL
 key 228   POUND
 key 227   STAR
 key 231   CALL              WAKE_DROPPED
@@ -26,7 +32,8 @@ key 61    CALL              WAKE_DROPPED
 key 232   DPAD_CENTER       WAKE_DROPPED
 key 108   DPAD_DOWN         WAKE_DROPPED
 key 103   DPAD_UP           WAKE_DROPPED
-key 102   HOME              WAKE
+#key 102   HOME              WAKE
+key 102   HOME              VIRTUAL
 key 105   DPAD_LEFT         WAKE_DROPPED
 key 106   DPAD_RIGHT        WAKE_DROPPED
 key 115   VOLUME_UP			WAKE_DROPPED
