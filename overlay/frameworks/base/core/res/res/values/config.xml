@@ -79,14 +79,15 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-<!--        <item>"wlan\\d"</item>	Commented out for now -->	
+        <item>"softap.*"</item>	
     </string-array>
 
     <!-- Regex array of allowable upstream ifaces for tethering - for example if you want
          tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the array -->
     <string-array translatable="false" name="config_tether_upstream_regexs">
         <item>"rmnet\\d"</item>
-        <item>"tiwlan\\d"</item>
+        <item>"wlan\\d"</item>
+        <item>"ppp\\d"</item>
     </string-array>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
@@ -102,13 +103,12 @@
 
     <integer-array name="config_autoBrightnessLevels">
         <item>0</item>
-        <item>3</item>
-        <item>5</item>
-        <item>10</item>
-        <item>30</item>
-        <item>40</item>
-        <item>50</item>
-        <item>255</item>
+        <item>90</item>
+        <item>150</item>
+        <item>300</item>
+        <item>900</item>
+        <item>1200</item>
+        <item>2000</item>
     </integer-array>
 
 
@@ -124,7 +124,6 @@
         <item>150</item>
         <item>200</item>
         <item>250</item>
-        <item>255</item>
         <item>255</item>
         <item>255</item>
     </integer-array>
@@ -144,7 +143,6 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
-        <item>0</item>
     </integer-array>
 
 
@@ -154,7 +152,6 @@
         Triumph has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
