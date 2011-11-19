@@ -148,7 +148,7 @@ PRODUCT_COPY_FILES += \
 
 # Init.d task management
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/etc/99memory:/system/etc/init.d/99memory
+    device/motorola/triumph/files/etc/init.d/99memory:/system/etc/init.d/99memory
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
