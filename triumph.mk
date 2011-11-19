@@ -119,7 +119,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/hostapd:/system/bin/hostapd \
     device/motorola/triumph/prebuilt/hostapd_cli:/system/bin/hostapd_cli \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
-    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd \
+    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
 
 # GPS
 PRODUCT_COPY_FILES += \
