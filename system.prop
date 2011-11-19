@@ -66,4 +66,4 @@ ro.cdma.voicemail.number=mine
 ro.telephony.call_ring.delay=1000
 wifi.wapi=0
 
-#ro.lights.kd_auto=true
+ro.tethering.kb_disconnect=1
