@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/init.triumph.rc:root/init.triumph.rc \
     device/motorola/triumph/ueventd.triumph.rc:root/ueventd.triumph.rc
 
-# vold
+# Vold
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/vold.fstab:system/etc/vold.fstab
 
@@ -137,9 +137,18 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
 
-# xml config
+# Xml config
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/media_profiles.xml:system/etc/media_profiles.xml
+
+# Modules
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/modules/tun.ko:/system/lib/modules/tun.ko \
+    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
+
+# Init.d task management
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/etc/99memory:/system/etc/init.d/99memory
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number

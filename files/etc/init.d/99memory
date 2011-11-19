@@ -1,0 +1,21 @@
+#!/system/bin/sh
+#
+# Write memory management parameters
+#
+if test "$RESP" != "OK"
+then
+	export RESP="OK"
+	/system/xbin/nohup /system/etc/init.d/99memory >/dev/null 2>&1 </dev/null & 
+	exit 0
+fi
+#
+# OK, we executed ourself (yea, I know) and effectively detached.  Now 
+# wait 2 minutes and then write the memory parameters
+# 
+sleep 120
+L="log -p i -t cm"
+
+$L "99memory: TG-CM7 Setting memory management parameters"
+
+echo "1536,3072,4096,10000,25000,32000" > /sys/module/lowmemorykiller/parameters/minfree
+exit 0
