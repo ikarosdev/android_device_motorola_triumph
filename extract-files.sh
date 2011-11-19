@@ -21,7 +21,7 @@ mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/bin/qmuxd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hci_qcomm_init  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/bin/hostapd  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/bin/hostapd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hciattach  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/netmgrd  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -186,7 +186,6 @@ PRODUCT_COPY_FILES += \\
 
 # other binaries
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/hostapd:/system/bin/hostapd \\
     vendor/__VENDOR__/__DEVICE__/proprietary/hciattach:/system/bin/hciattach \\
     vendor/__VENDOR__/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
     vendor/__VENDOR__/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\

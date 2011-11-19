@@ -1,0 +1,10 @@
+#!/system/bin/sh
+if [ -s /data/hostapd ]; then
+    chmod -R 777 /data/hostapd
+else
+    mkdir /data/hostapd
+    cp /system/etc/firmware/wlan/hostapd_default.conf /data/hostapd/hostapd.conf
+    touch /data/hostapd/hostapd.accept
+    touch /data/hostapd/hostapd.deny
+    chmod -R 777 /data/hostapd
+fi

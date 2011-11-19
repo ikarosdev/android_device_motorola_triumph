@@ -111,9 +111,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/wlan/qcom_wapi_fw.bin:/system/etc/firmware/wlan/qcom_wapi_fw.bin \
     device/motorola/triumph/files/etc/firmware/wlan/qcom_wlan_nv.bin:/system/etc/firmware/wlan/qcom_wlan_nv.bin \
     device/motorola/triumph/files/etc/firmware/wlan/cfg.dat:/system/etc/firmware/wlan/cfg.dat \
-    device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/firmware/wlan/qcom_cfg.ini:/system/etc/firmware/wlan/qcom_cfg.ini \
     device/motorola/triumph/files/etc/wifi/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+
+# Hostapd
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/hostapd:/system/bin/hostapd \
+    device/motorola/triumph/prebuilt/hostapd_cli:/system/bin/hostapd_cli \
+    device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
+    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd \
 
 # GPS
 PRODUCT_COPY_FILES += \
