@@ -46,6 +46,7 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/libra.ko"
 WIFI_DRIVER_MODULE_NAME := "libra"
 WIFI_SDIO_IF_DRIVER_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
 WIFI_SDIO_IF_DRIVER_MODULE_NAME := "librasdioif"
+BOARD_WEXT_NO_COMBO_SCAN := true
 
 # Camera
 #BOARD_USE_FROYO_LIBCAMERA := true
