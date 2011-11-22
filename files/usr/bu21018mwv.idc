@@ -20,6 +20,10 @@
 # Refer to the input device calibration documentation for more details.
 #
 
+# Basic Parameters
+touch.deviceType = touchScreen
+touch.orientationAware = 1
+
 # Touch Size
 touch.touchSize.calibration = pressure
 
@@ -27,7 +31,13 @@ touch.touchSize.calibration = pressure
 # Driver reports tool size as an area measurement.
 #
 # Based on empirical measurements, we estimate the size of the tool
-#
+# using size = sqrt(22 * rawToolArea + 0) * 9.2 + 0.
+touch.toolSize.calibration = area
+touch.toolSize.areaScale = 22
+touch.toolSize.areaBias = 0
+touch.toolSize.linearScale = 9.2
+touch.toolSize.linearBias = 0
+touch.toolSize.isSummed = 0
 
 # Pressure
 # Driver reports signal strength as pressure.
