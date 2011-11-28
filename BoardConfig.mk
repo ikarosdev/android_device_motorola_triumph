@@ -30,7 +30,8 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
-TARGET_PROVIDES_LIBAUDIO := true
+#TARGET_PROVIDES_LIBAUDIO := true
+BOARD_USES_AUDIO_LEGACY := true
 
 # Graphics
 BOARD_EGL_CFG := device/motorola/triumph/egl.cfg
