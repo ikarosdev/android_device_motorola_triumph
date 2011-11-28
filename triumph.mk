@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
     Term \
     gps.triumph \
     lights.triumph \
-    gralloc.msm7x30 \
+    gralloc.triumph \
     overlay.default \
     libOmxCore \
     libOmxVenc \
@@ -136,10 +136,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/liboemcamera.so:/system/lib/liboemcamera.so \
     device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
-
-# Touchscreen idc
-PRODUCT_COPY_FILES += \
-    device/motorola/triumph/files/usr/idc/bi041p.idc:/system/usr/idc/bi041p.idc
 
 # Xml config
 PRODUCT_COPY_FILES += \
