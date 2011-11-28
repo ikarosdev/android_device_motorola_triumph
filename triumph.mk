@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
 
+# Touchscreen idc
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/files/usr/idc/bi041p.idc:/system/usr/idc/bi041p.idc
+
 # Xml config
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/media_profiles.xml:system/etc/media_profiles.xml
