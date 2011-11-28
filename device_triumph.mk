@@ -26,7 +26,8 @@ PRODUCT_PACKAGES += \
     overlay.default \
     libOmxCore \
     libOmxVenc \
-    libOmxVdec
+    libOmxVdec \
+    audio.primary.triumph
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -136,6 +137,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/liboemcamera.so:/system/lib/liboemcamera.so \
     device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
+
+# Touchscreen
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/files/usr/idc/bi041p.idc:/system/usr/idc/bi041p.idc
 
 # Xml config
 PRODUCT_COPY_FILES += \
