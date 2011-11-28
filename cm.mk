@@ -1,4 +1,4 @@
-$(call inherit-product, device/semc/urushi/device_triumph.mk)
+$(call inherit-product, device/motorola/triumph/device_triumph.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
