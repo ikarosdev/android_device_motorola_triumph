@@ -64,6 +64,9 @@ BOARD_VENDOR_QCOM_GPS_HAS_BROKEN_XTRA := true
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
+# HDMI
+TARGET_HAVE_HDMI_OUT := true
+
 # Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/triumph/recovery_kernel
 BOARD_HAS_LARGE_FILESYSTEM := true
