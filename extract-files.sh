@@ -19,9 +19,9 @@ DEVICE=triumph
 
 mkdir -p ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# Radio binaries
 adb pull /system/bin/qmuxd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hci_qcomm_init  ../../../vendor/$VENDOR/$DEVICE/proprietary
-#adb pull /system/bin/hostapd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/hciattach  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/netmgrd  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -30,6 +30,7 @@ adb pull /system/bin/port-bridge  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/btwlancoex  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/rild  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# Sensor binaries
 adb pull /system/bin/thermald  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/geomagneticd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/orientationd  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -39,6 +40,7 @@ adb pull /system/bin/hdmid  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/bluetoothd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/cnd  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# MM
 adb pull /system/bin/mm-abl-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/mm-adec-omxaac-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/mm-adec-omxadpcm-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -70,24 +72,27 @@ adb pull /system/bin/mm-venc-omx-test720p  ../../../vendor/$VENDOR/$DEVICE/propr
 adb pull /system/bin/mm-video-driver-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/bin/mm-video-encdrv-test  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# Camera
 adb pull /system/lib/libcamera.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/liboemcamera.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# Audio
 adb pull /system/lib/libaudioalsa.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libaudioeq.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/liba2dp.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# EGL
 adb pull /system/lib/egl/libEGL_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv2_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/egl/libq3dtools_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libgsl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# Sensors
 adb pull /system/lib/hw/sensors.qcom.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/hw/gralloc.msm7k.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# OMX
 adb pull /system/lib/libOmxEvrcEnc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libOmxAacDec.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libOmxQcelp13Dec.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -111,6 +116,7 @@ adb pull /system/lib/libomx_mp3dec_sharedlibrary.so  ../../../vendor/$VENDOR/$DE
 adb pull /system/lib/libomx_sharedlibrary.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libOmxCore.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
+# RIL
 adb pull /system/lib/libril.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libril-qc-1.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libreference-ril.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -147,11 +153,7 @@ adb pull /system/lib/libuim.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 adb pull /system/lib/libgemini.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
-#adb pull /system/lib/libloc_api.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-#adb pull /system/lib/libloc-rpc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-#adb pull /system/lib/libloc_ext.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-#adb pull /system/lib/libgps.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-#adb pull /system/lib/libloc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+# GPS
 adb pull /system/lib/libcommondefs.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk
@@ -242,12 +244,10 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/liba2dp.so:/system/lib/liba2dp.so
 
 # Sensors
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.qcom.so:/system/lib/hw/sensors.triumph.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.triumph.so:/system/lib/hw/sensors.triumph.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
