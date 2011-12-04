@@ -89,7 +89,7 @@ adb pull /system/lib/egl/libq3dtools_adreno200.so  ../../../vendor/$VENDOR/$DEVI
 adb pull /system/lib/libgsl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Sensors
-adb pull /system/lib/hw/sensors.qcom.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/hw/sensors.triumph.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/hw/gralloc.msm7k.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # OMX
@@ -244,10 +244,6 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
-
-# Sensors
-PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/sensors.triumph.so:/system/lib/hw/sensors.triumph.so
 
 # GPS
 PRODUCT_COPY_FILES += \\

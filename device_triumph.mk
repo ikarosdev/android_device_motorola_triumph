@@ -119,8 +119,8 @@ PRODUCT_COPY_FILES += \
 
 # Hostapd
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/hostapd:/system/bin/hostapd \
-    device/motorola/triumph/prebuilt/hostapd_cli:/system/bin/hostapd_cli \
+    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
+    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
     device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
 
@@ -134,11 +134,15 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    device/motorola/triumph/prebuilt/libcamera.so:/system/lib/libcamera.so \
-    device/motorola/triumph/prebuilt/libcamera.so:/obj/lib/libcamera.so \
-    device/motorola/triumph/prebuilt/liboemcamera.so:/system/lib/liboemcamera.so \
-    device/motorola/triumph/prebuilt/libmmjpeg.so:/system/lib/libmmjpeg.so \
-    device/motorola/triumph/prebuilt/libmmipl.so:/system/lib/libmmipl.so
+    device/motorola/triumph/prebuilt/lib/libcamera.so:/system/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/lib/libcamera.so:/obj/lib/libcamera.so \
+    device/motorola/triumph/prebuilt/lib/liboemcamera.so:/system/lib/liboemcamera.so \
+    device/motorola/triumph/prebuilt/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    device/motorola/triumph/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/lib/hw/sensors.triumph.so:/system/lib/hw/sensors.triumph.so
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
