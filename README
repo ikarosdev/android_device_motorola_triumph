@@ -1,29 +1,6 @@
-#### TEST
-
 This is a WIP. Currently builds, flashes and boots. Most, but not all, things are functional.
 
-Here's what is currently working:
-
-- RIL/3G (credits to tickerguy)
-- Rear-facing camera
-- Wifi
-- Sound (credits to tickerguy)
-- Touchscreen w/ multitouch
-- 3D Graphics/EGL
-- Bluetooth
-- Orientation/screen rotate
-- LED/keyboard lights
-- USB mounting
-- Proximity sensor
-- Ambient light sensor (credits to tickerguy)
-- Wired headset (credits to tickerguy)
-- MMS (credits to tickerguy)
-- GPS (credits to tickerguy)
-- Front-facing camera (full support on MIUI/CM7)
-
-What isn't working:
-
-- HDMI output
+The current status of ICS-Triumph is unknown.
 
 CAF information:
 
