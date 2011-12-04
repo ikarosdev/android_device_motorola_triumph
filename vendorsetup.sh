@@ -22,4 +22,4 @@
 
 #add_lunch_combo generic_encore-userdebug
 add_lunch_combo full_triumph-eng
-add_lunch_combo cyanogen_triumph-eng
+add_lunch_combo cm_triumph-userdebug
