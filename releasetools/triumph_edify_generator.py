@@ -178,11 +178,13 @@ class EdifyGenerator(object):
     """Format the given partition, specified by its mount point (eg,
     "/system")."""
 
+    reserve_size = 0
     fstab = self.info.get("fstab", None)
     if fstab:
       p = fstab[partition]
-      self.script.append('format("%s", "%s", "%s");' %
-                         (p.fs_type, common.PARTITION_TYPES[p.fs_type], p.device))
+      self.script.append('format("%s", "%s", "%s", "%s");' %
+                         (p.fs_type, common.PARTITION_TYPES[p.fs_type],
+                          p.device, p.length))
 
   def DeleteFiles(self, file_list):
     """Delete all files in file_list."""
