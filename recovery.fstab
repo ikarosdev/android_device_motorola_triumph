@@ -1,8 +1,8 @@
-# mountpoint	fstype              device    	       [device2]                       [fstype2]          [fsoptions]       [fsoptions2]
+# mountpoint	fstype              device    	       [device2]
 
-/boot           emmc        /dev/block/mmcblk0p5      NULL                              NULL
-/cache          ext4	    /dev/block/mmcblk0p11     NULL                              ext3
-/data           ext4        /dev/block/mmcblk0p8      NULL                              ext3
-/system         ext4        /dev/block/mmcblk0p7      NULL                              ext3
-/sdcard	        vfat	    /dev/block/mmcblk1p1      /dev/block/mmcblk1                NULL
-/sd-ext	        ext4	    /dev/block/mmcblk1p2      NULL		                ext3
+/boot           emmc        /dev/block/mmcblk0p5
+/cache          ext4	    /dev/block/mmcblk0p11
+/data           ext4        /dev/block/mmcblk0p8
+/system         ext4        /dev/block/mmcblk0p7
+/sdcard	        vfat	    /dev/block/mmcblk1p1      /dev/block/mmcblk1
+/sd-ext	        ext4	    /dev/block/mmcblk1p2
