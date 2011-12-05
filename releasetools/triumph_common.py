@@ -154,17 +154,33 @@ def LoadRecoveryFSTab(zip):
     line = line.strip()
     if not line or line.startswith("#"): continue
     pieces = line.split()
-    if not (3 <= len(pieces) <= 7):
+    if not (3 <= len(pieces) <= 4):
       raise ValueError("malformed recovery.fstab line: \"%s\"" % (line,))
 
     p = Partition()
     p.mount_point = pieces[0]
     p.fs_type = pieces[1]
     p.device = pieces[2]
-    if len(pieces) >= 4 and pieces[3] != 'NULL':
-      p.device2 = pieces[3]
+    p.length = 0
+    options = None
+    if len(pieces) >= 4:
+      if pieces[3].startswith("/"):
+        p.device2 = pieces[3]
+        if len(pieces) >= 5:
+          options = pieces[4]
+      else:
+        p.device2 = None
+        options = pieces[3]
     else:
       p.device2 = None
+
+    if options:
+      options = options.split(",")
+      for i in options:
+        if i.startswith("length="):
+          p.length = int(i[7:])
+        else:
+          print "%s: unknown option \"%s\"" % (p.mount_point, i)
 
     d[p.mount_point] = p
   return d
@@ -337,7 +353,7 @@ def SignFile(input_name, output_name, key, password, align=None,
   else:
     sign_name = output_name
 
-  cmd = ["java", "-Xmx512m", "-jar",
+  cmd = ["java", "-Xmx2048m", "-jar",
            os.path.join(OPTIONS.search_path, "framework", "signapk.jar")]
   if whole_file:
     cmd.append("-w")
