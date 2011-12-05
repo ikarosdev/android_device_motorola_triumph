@@ -24,8 +24,8 @@ PRODUCT_PACKAGES += \
     lights.triumph \
     gralloc.msm7x30 \
     overlay.default \
-    audio_policy.msm7x30 \
-    audio.primary.msm7x30 \
+    audio_policy.triumph \
+    audio.primary.triumph \
     audio.a2dp.default \
     libOmxCore \
     libOmxVenc \
