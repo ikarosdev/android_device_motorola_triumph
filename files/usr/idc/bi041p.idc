@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #
-# Input Device Configuration File for the bu21018mwv touch screen.
+# Input Device Configuration File for the bi041p touch screen.
 #
 # These calibration values are derived from empirical measurements
 # and may not be appropriate for use with other touch screens.

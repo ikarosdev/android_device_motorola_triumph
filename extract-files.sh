@@ -79,6 +79,7 @@ adb pull /system/lib/libmmjpeg.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Audio
+adb pull /system/lib/libaudio.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libaudioalsa.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # EGL
@@ -242,8 +243,10 @@ PRODUCT_COPY_FILES += \\
 
 # Audio
 PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/obj/lib/libaudio.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/system/lib/libaudio.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
