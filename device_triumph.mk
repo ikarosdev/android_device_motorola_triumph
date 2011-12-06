@@ -23,10 +23,13 @@ PRODUCT_PACKAGES += \
     gps.triumph \
     lights.triumph \
     gralloc.msm7x30 \
+    hwcomposer.default \
     overlay.default \
     audio_policy.triumph \
     audio.primary.triumph \
     audio.a2dp.default \
+    libaudiohw_legacy \
+    libaudioutils \
     libOmxCore \
     libOmxVenc \
     libOmxVdec
