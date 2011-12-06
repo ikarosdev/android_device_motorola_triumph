@@ -143,6 +143,14 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so
 
+# EGL
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+    device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
+    vendor/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so
+
 # Sensors
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/hw/sensors.triumph.so:/system/lib/hw/sensors.triumph.so

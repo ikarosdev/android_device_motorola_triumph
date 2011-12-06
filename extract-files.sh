@@ -81,17 +81,17 @@ adb pull /system/lib/libmmipl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 # Audio
 adb pull /system/lib/libaudio.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 adb pull /system/lib/libaudioalsa.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+adb pull /system/lib/liba2dp.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # EGL
-adb pull /system/lib/egl/libEGL_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv1_CM_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv2_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/egl/libq3dtools_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/libgsl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/egl/libEGL_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/egl/libGLESv1_CM_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/egl/libGLESv2_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/egl/libq3dtools_adreno200.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/libgsl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Sensors
 adb pull /system/lib/hw/sensors.triumph.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
-adb pull /system/lib/hw/gralloc.msm7k.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # OMX
 adb pull /system/lib/libOmxEvrcEnc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
@@ -234,19 +234,20 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so
 
 # egl
-PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so
+#PRODUCT_COPY_FILES += \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
+#    vendor/__VENDOR__/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so
 
 # Audio
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/obj/lib/libaudio.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudio.so:/system/lib/libaudio.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/obj/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/liba2dp.so:/system/lib/liba2dp.so
 
 # GPS
 PRODUCT_COPY_FILES += \\
