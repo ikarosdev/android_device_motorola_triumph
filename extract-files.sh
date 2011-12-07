@@ -91,7 +91,7 @@ adb pull /system/lib/liba2dp.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 #adb pull /system/lib/libgsl.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # Sensors
-adb pull /system/lib/hw/sensors.triumph.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
+#adb pull /system/lib/hw/sensors.triumph.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
 
 # OMX
 adb pull /system/lib/libOmxEvrcEnc.so  ../../../vendor/$VENDOR/$DEVICE/proprietary
