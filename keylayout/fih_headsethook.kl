@@ -69,7 +69,7 @@ key 56    ALT_LEFT
 key 57    SPACE
 key 69    NUM
 key 100   ALT_RIGHT
-key 102   HOME
+key 102   HOME		   WAKE
 key 103   DPAD_UP
 key 105   DPAD_LEFT
 key 106   DPAD_RIGHT

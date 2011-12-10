@@ -20,3 +20,6 @@ key 183   FOCUS
 # Volume keys
 key 115   VOLUME_UP         WAKE_DROPPED
 key 114   VOLUME_DOWN       WAKE_DROPPED
+
+# Home key
+key 102   HOME              WAKE_DROPPED
