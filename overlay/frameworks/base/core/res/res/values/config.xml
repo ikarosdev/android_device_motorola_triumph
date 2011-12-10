@@ -59,7 +59,7 @@
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">false</bool>
+    <bool name="config_showNavigationBar">true</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
@@ -72,11 +72,13 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>100</item>
-        <item>200</item>
-        <item>400</item>
-        <item>1000</item>
-        <item>3000</item>
+        <item>0</item>
+        <item>90</item>
+        <item>150</item>
+        <item>300</item>
+        <item>900</item>
+        <item>1200</item>
+        <item>2000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -84,12 +86,14 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>16</item>
-        <item>40</item>
-        <item>60</item>
-        <item>70</item>
-        <item>70</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
         <item>250</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -97,9 +101,11 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
         <item>255</item>
-        <item>255</item>
-        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -111,8 +117,10 @@
          Crespo has no keyboard so all values are zero.
     -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-        <item>255</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -132,17 +140,11 @@
          does not require auto-restore. -->
     <!-- the 6th element indicates boot-time dependency-met value. -->
     <string-array translatable="false" name="networkAttributes">
-        <item>wifi,1,1,1,</item>
-        <item>mobile,0,0,0,</item>
-        <item>mobile_mms,2,0,2</item>
-        <item>mobile_supl,3,0,2</item>
-        <item>mobile_dun,4,0,2</item>
-        <item>mobile_hipri,5,0,3</item>
-        <item>mobile_agps,7,0,2</item>
-        <item>mobile_fota,8,0,2</item>
-        <item>"mobile_oem1,9,0,2"</item>
-        <item>"mobile_oem2,10,0,2"</item>
-        <item>"mobile_oem3,11,0,2"</item>
+        <item>"wifi,1,1,1,-1,true"</item>
+        <item>"mobile,0,0,0,-1,true"</item>
+        <item>"mobile_mms,2,0,2,60000,true"</item>
+        <item>"mobile_supl,3,0,2,60000,true"</item>
+        <item>"mobile_hipri,5,0,3,60000,true"</item>
     </string-array>
 
     <!-- An Array of "[ConnectivityManager connectionType],
@@ -163,7 +165,7 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>tiap\\d</item>
+        <!--<item>tiap\\d</item> -->
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -208,10 +210,6 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>10</item>
     </integer-array>
-
-    <!-- Boolean indicating if restoring network selection should be skipped -->
-    <!-- The restoring is handled by modem if it is true -->
-    <bool translatable="false" name="skip_restoring_network_selection">true</bool>
 
     <!-- If true, the direction rotation is applied to get to an application's requested
          orientation is reversed.  Normally, the model is that landscape is
