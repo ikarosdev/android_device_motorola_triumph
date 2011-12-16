@@ -1,4 +1,4 @@
-on fs
+on early-fs
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0771 system system
