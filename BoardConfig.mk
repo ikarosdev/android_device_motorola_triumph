@@ -41,6 +41,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USES_2G_VM_SPLIT := true
 #TARGET_USES_OLD_LIBSENSORS_HAL := true
 
+# Set insecure for root access
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+
 # Releasetools
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/motorola/triumph/releasetools/triumph_img_from_target_files
