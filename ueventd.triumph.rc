@@ -115,3 +115,9 @@
 
 #graphics
 /dev/msm_rotator        0660    system      graphics
+/dev/kgsl-2d0           0666    root        root
+/dev/kgsl-3d0           0666    root        root
+
+#genlock
+/dev/genlock            0666    root        root
+

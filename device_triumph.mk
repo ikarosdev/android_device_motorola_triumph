@@ -24,7 +24,11 @@ PRODUCT_PACKAGES += \
     lights.triumph \
     gralloc.msm7x30 \
     hwcomposer.default \
+    hwcomposer.msm7x30 \
     overlay.default \
+    libgenlock \
+    libmemalloc \
+    liboverlay \
     audio_policy.triumph \
     audio.primary.triumph \
     audio.a2dp.default \
@@ -104,9 +108,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/vidc_720p_h264_enc_mc.fw:/system/etc/firmware/vidc_720p_h264_enc_mc.fw \
     device/motorola/triumph/files/etc/firmware/vidc_720p_mp4_dec_mc.fw:/system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
     device/motorola/triumph/files/etc/firmware/vidc_720p_mp4_enc_mc.fw:/system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
-    device/motorola/triumph/files/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
-    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
-    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
+    device/motorola/triumph/files/etc/firmware/vidc_720p_vc1_dec_mc.fw:/system/etc/firmware/vidc_720p_vc1_dec_mc.fw
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -143,13 +145,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
     device/motorola/triumph/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so
 
-# EGL
+# EGL/GPU
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/prebuilt/lib/egl/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
     device/motorola/triumph/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     device/motorola/triumph/prebuilt/lib/egl/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
     device/motorola/triumph/prebuilt/lib/egl/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \
-    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so
+    device/motorola/triumph/prebuilt/lib/libgsl.so:/system/lib/libgsl.so \
+    device/motorola/triumph/files/etc/firmware/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
+    device/motorola/triumph/files/etc/firmware/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -181,7 +185,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=32m \
-    persist.sys.use_dithering=1 \
     ro.sf.lcd_density=240 \
     ro.compcache.default=0
 
@@ -194,7 +197,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.gmm=android-motorola
 
 # Triumph uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
+# PRODUCT_LOCALES += hdpi
 
 # Set region
 PRODUCT_DEFAULT_LANGUAGE := en_US
